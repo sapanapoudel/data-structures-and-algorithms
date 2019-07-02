@@ -35,7 +35,7 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  for(let i = 0; i < times; i++) {
+  for (let i = 0; i < times; i++) {
     callback(arr, num);
   }
   return arr;
@@ -51,7 +51,7 @@ Return the modified array.
 
 const removeOne = (num, arr) => {
   // Solution code here...
-  if(num % 3 === 2) {
+  if (num % 3 === 2) {
     arr.pop();
   }
 };
@@ -72,7 +72,7 @@ Write a function named removeWithForEach that produces the same output as challe
 const removeWithForEach = (arr, callback) => {
   // Solution code here...
   arr.forEach(el => {
-    if(el % 3 === 2) {
+    if (el % 3 === 2) {
       callback(el, arr);
     }
   });
@@ -83,19 +83,21 @@ const removeWithForEach = (arr, callback) => {
 CHALLENGE 5
 Write a function named removeWithAnon that produces the same output as challenges 3 and 4.
 This function should use forEach again, but rather than taking in a callback as an argument, define an anonymous function as the argument to forEach.
-This anonymous function should accept up to three arguments: the element, the index, and the array.
+This anonymous function should accept up to three arguments: the element, th, and the array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
   // Solution code here...
-  const test_5 = function(el, index, arr) {
-    if(el % 3 === 2)
+  arr.forEach((el) => {
+    if (el % 3 === 2) {
       arr.pop();
+    }
+  });
 
-  };
-  (arr).forEach(test_5);
   return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -114,8 +116,8 @@ This function should use forEach to populate your grocery list based on the stor
 const createList = (availableItems) => {
   // Solution code here...
   let myList = [];
-  availableItems.forEach((item)  => {
-    if(item.available === true) {
+  availableItems.forEach((item) => {
+    if (item.available === true) {
       myList.push(item.name);
     }
   });
@@ -135,19 +137,19 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-  // let outputArr = [];
-  arr.forEach((number, index) => {
-    if(number % 3 === 0){
-      arr[index] = 'Fizz';
-    } else if(number % 5 === 0) {
-      arr[index] = 'Buzz';
-    } else if((number % 3 === 0) && (number % 5 === 0)) {
-      arr[index] = 'Fizz Buzz';
+  let outputArr = [];
+  arr.forEach(number => {
+    if ((number % 3 === 0)&& (number % 5 === 0) ) {
+      outputArr.push('Fizz Buzz');
+    } else if (number % 5 === 0) {
+      outputArr.push('Buzz');
+    } else if (number % 3 === 0) {
+      outputArr.push('Fizz');
     } else {
-      arr[index] = number;
+      outputArr.push(number);
     }
   });
-  return arr;
+  return outputArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
