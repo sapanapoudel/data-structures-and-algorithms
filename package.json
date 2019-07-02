@@ -1,0 +1,23 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapanapoudel/data-structures-and-algorithms.git"
+  },
+  "author": "sapana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sapanapoudel/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/sapanapoudel/data-structures-and-algorithms#readme"
+}
