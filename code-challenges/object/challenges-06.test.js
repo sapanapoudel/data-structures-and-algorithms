@@ -1,6 +1,5 @@
 'use strict';
 
-// import { removeProperties } from "@babel/types";
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -123,8 +122,8 @@ const hasChildrenEntries = (arr, character) => {
   // Solution code here...
   let hasChildren = false;
   Object.entries(characters).forEach(item => {
-    if(item[1].name === character) {
-      if(item[1].children.length > 0) {
+    if (item[1].name === character) {
+      if (item[1].children.length > 0) {
         return hasChildren = true;
       }
     }
@@ -141,16 +140,18 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
-  let character = 0;
-  for (let i = 0; i < arr.length; i++){
-    for(let j = 0; j < Object.values(arr[i]).length; j++){
-      if(Object.values(arr[i])[j] !== null) {
-        character++;
-        arr.push(character);
-      }
+
+  let count = 0;
+
+  Object.values(characters).forEach(item => {
+    if (item.spouse !== null) {
+      count++;
     }
-  }
-  return arr;
+    if (item.children.length > 0) {
+      count++;
+    }
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
