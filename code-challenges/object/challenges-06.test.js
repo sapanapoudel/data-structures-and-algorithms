@@ -16,12 +16,11 @@ const courseInfo = {
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
-  let resultArray = [];
-  for (let keys in obj) {
-    resultArray.push(keys);
-  }
-  return resultArray;
+  const resultArr = [];
+  Object.keys(courseInfo).forEach(key => {
+    resultArr.push(key);
+  });
+  return resultArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,6 +79,7 @@ const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
   arr.forEach(names => houses.push(names.house));
+
   return houses;
 };
 
@@ -144,11 +144,12 @@ const totalCharacters = (arr) => {
   let count = 0;
 
   Object.values(characters).forEach(item => {
+    count++;
     if (item.spouse !== null) {
       count++;
     }
     if (item.children.length > 0) {
-      count++;
+      count+= item.children.length;
     }
   });
   return count;
