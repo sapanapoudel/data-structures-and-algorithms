@@ -40,7 +40,8 @@ let starWarsData = [{
   skin_color: 'gold',
   eye_color: 'yellow',
   birth_year: '112BBY',
-  gender: 'n/a'},
+  gender: 'n/a'
+},
 {
   name: 'R2-D2',
   height: '96',
@@ -75,10 +76,10 @@ let starWarsData = [{
 const returnNames = (arr) => {
   // Solution code here...
   let new_arr = [];
-  return arr.reduce((acc, val, idx) => {
+  return arr.reduce((acc, val) => {
     new_arr.push(val.name);
     return new_arr;
-  },0);
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +92,8 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  let arr = str.split('').reduce((str, newString) => { return newString + str;
+  let arr = str.split('').reduce((str, newString) => {
+    return newString + str;
   });
   return arr;
 };
@@ -148,13 +150,13 @@ const characters = [
 const countNumberOfChildren = (arr) => {
   // Solution code here...
   // eslint-disable-next-line no-unused-vars
-  arr = arr.reduce((acc, val, idx) => {
-    if(val.children.length > 0){
-      acc+= val.children;
-      return acc;
+  return arr.reduce((acc, val) => {
+    if (val.children) {
+      acc += val.children.length;
     }
+    return acc;
   }, 0);
-  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -167,10 +169,14 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
-  arr = arr.reduce((count, sum) =>{
-    count+sum/arr.length;
-    return arr;
-  });
+  let unicorn = arr.reduce((acc, val) => {
+    acc.count = arr.length;
+    acc.sum += val;
+    return acc;
+
+  }, {count:0, sum:0});
+  return unicorn.sum / unicorn.count;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -194,12 +200,12 @@ const countPrimeNumbers = (arr) => {
   // Solution code here...
   // let count = 0;
   arr = arr.reduce((acc, val) => {
-    if(isPrime(val)) acc++;
-    else{
+    if (isPrime(val)) acc++;
+    else {
       acc === 0;
     }
     return acc;
-  },0);
+  }, 0);
   return arr;
 };
 
@@ -278,7 +284,7 @@ describe('Testing challenge 1', () => {
 
 describe('Testing challenge 2', () => {
   test('It should return an array continaing the names of the characters', () => {
-    expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
+    expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
@@ -297,7 +303,7 @@ describe('Testing challenge 4', () => {
 
 describe('Testing challenge 5', () => {
   test('It should return the average of the numbers in the array', () => {
-    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
@@ -315,7 +321,7 @@ xdescribe('Testing challenge 7', () => {
 
 xdescribe('Testing challenge 8', () => {
   test('It should return an array containing the names of the children', () => {
-    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters)).toStrictEqual(['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']);
     expect(extractChildren(characters).length).toStrictEqual(10);
   });
 });
