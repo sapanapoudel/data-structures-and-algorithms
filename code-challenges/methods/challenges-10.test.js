@@ -58,8 +58,8 @@ const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   return input.map(el => {
     let newArr = el.filter(el => {
-      if(typeof(el) === 'number'){
-        if(el % 5 === 0){
+      if (typeof (el) === 'number') {
+        if (el % 5 === 0) {
           return true;
         }
       }
@@ -143,14 +143,15 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-// return data.filter(person => person.height ? )
+  let shortPeopleData = data.reduce( (acc, person) =>
+    acc.height < person.height ? person : acc);
+  return shortPeopleData.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
 All the code below will verify that your functions are working to solve the challenges.
-
 DO NOT CHANGE any of the below code.
 
 Run your tests from the console: jest challenges-10.test.js
