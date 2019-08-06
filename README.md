@@ -12,4 +12,4 @@ To get the reverse array, I took two approaches. First, I didn't create the new 
 O(n) = Linear time complexity
     
 ## Solution
-![Array reversed white board image](assets/ReverseArray.jpg)
+![Array reversed white board image](code401challenges/assets/ReverseArray.jpg)
