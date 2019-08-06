@@ -13,7 +13,7 @@ public class ArrayReverse {
 
   }
 
-  // Creating new Array
+  // Creating new Array 
   public static void reverseArray(int[] arr, int n) {
     int[] newArray = new int[n];
     int j = n;

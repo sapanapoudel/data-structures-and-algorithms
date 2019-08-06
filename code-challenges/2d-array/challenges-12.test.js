@@ -181,11 +181,11 @@ const lowestWeeklyAverage = (weather) => {
   // Solution code here...
   let resultArr =[];
   weather.forEach(i=>{
-    let count =0;
+    let sum =0;
     i.forEach(j =>{
-      count +=j;
+      sum +=j;
     });
-    resultArr.push(count/7);
+    resultArr.push(sum/7);
   });
   resultArr.sort((a,b)=>a-b);
   return resultArr[0];
