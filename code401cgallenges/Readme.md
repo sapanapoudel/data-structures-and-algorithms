@@ -2,7 +2,7 @@
 1. Reverse the Array
     
 
-## Reverse the Array
+## 1. Reverse the Array
     
 ## Challenge
 Write a function that takes an array as argument and return an array with elements in reverse order. 
