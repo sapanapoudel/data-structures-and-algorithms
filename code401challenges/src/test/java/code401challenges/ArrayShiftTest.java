@@ -14,7 +14,7 @@ public class ArrayShiftTest {
 
     @Test public void testArrayShift_expectedFailure() {
 
-        assertNotEquals(new int[]{3, 1, 2, 4, 5}, ArrayShift.insertShiftArray(new int[]{1, 2, 4, 5}, 3));
+        assertNotEquals(new int[]{10, 1, 2, 4, 5}, ArrayShift.insertShiftArray(new int[]{1, 2, 4, 5}, 10));
     }
 
     @Test public void testArrayShift_edgeCase(){
