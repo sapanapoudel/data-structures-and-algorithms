@@ -1,5 +1,6 @@
 ## Table of Contents
 1. Reverse the Array
+2. Insert and shift an array in middle at index
     
 
 ## 1. Reverse the Array
@@ -13,3 +14,18 @@ O(n) = Linear time complexity
     
 ## Solution
 ![Array reversed white board image](code401challenges/assets/ReverseArray.jpg)
+
+  
+## 2. Insert and shift an array in middle at index
+  
+## Challenge
+Write a function called insertShiftArray which takes two parameters arr and the valued to be added. 
+
+## Source
+Pair programmed with Merisha
+  
+## Approach & Efficiency 
+To insert the value at the middle of the array, I find the mid point. If my index at new array is less than mid point, i copied same element from output array to new array. If the index at new array is midpoint, then I insert the value. If index is greater then midpoint, it copied element from input array at index - 1. Both time and space complexity is O(n). 
+
+## Solution 
+![Insert and shift an array whiteboard image](code401challenges/assets/insertShiftArray.jpg)
