@@ -25,4 +25,4 @@ To insert the value at the middle of the array, I find the mid point. If my inde
 
 ## Solution 
 [code](src/main/java/code401challenges/ArrayShift.java)|[Test](src/test/java/code401challenges/ArrayShiftTest.java)
-![Insert and shift an array whiteboard image](assets/insertShiftArray.jpg)◊
+![Insert and shift an array whiteboard image](assets/insertShiftArray.jpg)
