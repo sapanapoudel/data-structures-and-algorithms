@@ -1,8 +1,3 @@
-## Table of Contents
-1. [Reverse the Array](code401challenges/README.md)
-2. [Insert and shift an array in middle at index](code401challenges/README.md)
-    
-
 ## 1. Reverse the Array
     
 ## Challenge
@@ -13,7 +8,8 @@ To get the reverse array, I took two approaches. First, I didn't create the new 
 O(n) = Linear time complexity
     
 ## Solution
-![Array reversed white board image](code401challenges/assets/ReverseArray.jpg)
+[code](src/main/java/code401challenges/ArrayReverse.java)
+![Array reversed white board image](assets/ReverseArray.jpg)
 
   
 ## 2. Insert and shift an array in middle at index
@@ -28,4 +24,5 @@ Pair programmed with Merisha
 To insert the value at the middle of the array, I find the mid point. If my index at new array is less than mid point, i copied same element from output array to new array. If the index at new array is midpoint, then I insert the value. If index is greater then midpoint, it copied element from input array at index - 1. Both time and space complexity is O(n). 
 
 ## Solution 
-![Insert and shift an array whiteboard image](code401challenges/assets/insertShiftArray.jpg)
+[code](src/main/java/code401challenges/ArrayShift.java)|[Test](src/test/java/code401challenges/ArrayShiftTest.java)
+![Insert and shift an array whiteboard image](assets/insertShiftArray.jpg)◊
