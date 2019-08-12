@@ -61,4 +61,4 @@ toString()
   
 #### Solution 
 [Code](src/main/java/code401challenges/linkedlist)
-[Test](src/test/java/code401challenges)
+[Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
