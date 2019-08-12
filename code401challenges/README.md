@@ -47,3 +47,18 @@ https://www.udemy.com/data-structures-and-algorithms-deep-dive-using-java/learn/
 [code](src/main/java/code401challenges/BinarySearch.java)
 [Test](src/test/java/code401challenges/BinarySearchTest.java)
 ![Binary Search whiteboard image](assets/Binary_Search.jpg)
+
+### 4. Linked List
+#### Challange 
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created. 
+
+#### Method
+```
+insert()
+include()
+toString()
+```
+  
+#### Solution 
+[Code](src/main/java/code401challenges/linkedlist)
+[Test](src/test/java/code401challenges)
