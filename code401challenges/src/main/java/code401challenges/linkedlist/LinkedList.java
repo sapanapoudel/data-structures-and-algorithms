@@ -27,19 +27,6 @@ public class LinkedList<T> {
     }
 
 
-    public void printLinkedList() {
-        String output = "";
-        Node current = this.head;
-        System.out.print("HEAD -->");
-        while(current != null) {
-            System.out.print(current.getValue());
-            System.out.print("-->");
-            current = current.getNextNode();
-        }
-
-        System.out.println("null");
-    }
-
     public String toString() {
         String result = "HEAD";
         Node current = this.head;
