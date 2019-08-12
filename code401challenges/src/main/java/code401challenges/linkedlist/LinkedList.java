@@ -39,5 +39,20 @@ public class LinkedList<T> {
 
         System.out.println("null");
     }
+
+    public String toString() {
+        String result = "HEAD";
+        Node current = this.head;
+        while(current != null) {
+            result = result +  "--> " + current.getValue();
+            current = current.getNextNode();
+
+        }
+        result = result + "--> null";
+        return result;
+
+
+
+    }
     }
 
