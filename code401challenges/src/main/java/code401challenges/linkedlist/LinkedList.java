@@ -11,25 +11,27 @@ public class LinkedList<T> {
     //Insert node
     public  void insert (T value) {
         LinkedList list = new LinkedList();
-        Node  newNode = new Node(value, this.head );
+        Node<T>  newNode = new Node<T>(value, this.head );
         this.head = newNode;
         }
 
     //Includes
     public boolean includes (T value) {
-        Node current = this.head;
+        Node<T> current = this.head;
         while(current != null) {
-            if(current.getValue() == value)
+            if(current.getValue() == value){
                 return true;
+            }
+
             current = current.getNextNode();
         }
         return false;
     }
 
-
+    //toString
     public String toString() {
         String result = "HEAD";
-        Node current = this.head;
+        Node<T> current = this.head;
         while(current != null) {
             result = result +  "--> " + current.getValue();
             current = current.getNextNode();
@@ -37,9 +39,6 @@ public class LinkedList<T> {
         }
         result = result + "--> null";
         return result;
-
-
-
     }
     }
 
