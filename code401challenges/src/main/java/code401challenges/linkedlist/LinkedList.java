@@ -2,7 +2,7 @@ package code401challenges.linkedlist;
 
 public class LinkedList<T> {
     //Fields
-    Node <T> head;
+    private Node <T> head;
 
     public LinkedList() {
         this.head = null;
