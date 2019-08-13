@@ -4,7 +4,7 @@ package code401challenges.linkedlist;
 public class Node <T>{
     //Fields
     private T value;
-    private Node nextNode; // nextNode is also a Node
+    private Node<T> nextNode; // nextNode is also a Node
 
     //Constructor
     public Node(T value, Node nextNode) {
@@ -12,12 +12,12 @@ public class Node <T>{
         this.nextNode = nextNode;
     }
 
-    public void setNextNode(Node nextNode) {
+    public void setNextNode(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
 
-    public Node getNextNode (){
-        return nextNode;
+    public Node<T> getNextNode (){
+        return this.nextNode;
     }
     public T getValue () {
         return this.value;
