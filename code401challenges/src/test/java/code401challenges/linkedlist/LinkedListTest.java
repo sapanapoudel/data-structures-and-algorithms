@@ -37,4 +37,19 @@ public class LinkedListTest {
         assertEquals("should be true", false, list.includes(5));
     }
 
+    //Append at the end
+    @Test public void appendTest() {
+        LinkedList<Integer> list = new LinkedList();
+        list.insert(6);
+        list.insert(9);
+        list.append(4);
+        assertEquals("should be equal", "HEAD--> 9--> 6--> 4--> null", list.toString());
+    }
+    @Test public void appendTest_emptyLL() {
+        LinkedList<Integer> list = new LinkedList();
+        list.append(3);
+        System.out.println(list.toString());
+        assertEquals("should be equal", "HEAD--> 3--> null", list.toString());
+    }
+
 }
