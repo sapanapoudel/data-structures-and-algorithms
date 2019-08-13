@@ -62,3 +62,20 @@ toString()
 #### Solution 
 [Code](src/main/java/code401challenges/linkedlist)
 [Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
+
+
+### 5.Linked Class
+#### Challenge
+Create a methods which add new node with given value at the end of the linked list. Also create methods called addAfter and addBefore.
+
+#### Approach and Efficiency
+1. Given the value, create a new node and add at the end of the LL
+2. Locate current node
+3. Attach new node to end
+2. Create an adaBefore method 
+3. Create an addAfter method 
+
+#### Solution 
+[Code](src/main/java/code401challenges/linkedlist)
+[Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
+![White board image](assets/linked-list white board.jpg)
