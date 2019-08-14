@@ -59,52 +59,72 @@ public class LinkedList<T> {
         current.setNextNode(newNode);
     }
 
-//    public void append(T value) {
-//        Node <T> newNode = new Node<>(value, this.head);
-//        Node<T> current = this.head;
-//        while(current.getNextNode() != null) {
-//            current = current.getNextNode();
-//        }
-//        if(this.head == null) {
-//            this.head = newNode;
-//
-//        }
-//        newNode.setNextNode(null);
-////        current.setNextNode(newNode);
-//    }
-
-//    while Current.Next is not equal to NULL
-//				if Current.Next.Value is equal to existingNode.Value
-//    newNode.Next <-- existingNode
-//    Current.Next <-- newNode
-//
-//    Current <-- Current.Next;
-
-    //InsertBefore
-    public void insertBefore(T newVal, T value) {
+    //Insert Before
+    public void insertBefore(T newVal, T curValue) {
+        Node<T> newNode = new Node<T>(newVal, null);
         Node<T> current = this.head;
-        while(current.getNextNode() != null) {
-            if(current.getNextNode().getValue() == value) {
-                Node<T> newNode = new Node<>(newVal, this.head);
-                newNode.setNextNode(current.getNextNode());
-                current.setNextNode(newNode);
-
-            }
-            current = current.getNextNode();
+        Node<T> previous = null;
+        if(head.getValue() == curValue){
+            newNode.setNextNode(this.head);
+            this.head = newNode;
             return;
+        }
+        while(current != null) {
+            if(current.getValue().equals(curValue)) {
+                newNode.setNextNode(current);
+                assert previous != null;
+                previous.setNextNode(newNode);
+                break;
+            } else {
+                previous = current;
+                current = current.getNextNode();
+            }
         }
     }
 
-    //InsertAfter
-    public void insertAfter(T value, T newValue) {
-        //Check if the given node is null
-        Node<T> previousNode = Node<T>(value,this.head)
-        if(current == null) {
-            System.out.println("The previous node is null");
+    //Insert After
+    public void insertafter(T newValue, T curValue) {
+        Node<T> newNode = new Node<T>(newValue, null);
+        Node<T> current = this.head;
+        while(current != null) {
+            if(current.getValue().equals(curValue)) {
+                newNode.setNextNode(current.getNextNode());
+                current.setNextNode(newNode);
+                break;
+            }
+            current = current.getNextNode();
         }
-        Node<T> newNode = new Node<>(newValue, this.head);
-        newNode.setNextNode(null);
-        current.setNextNode(newNode);
+    }
+
+
+    //method for the Linked List class that takes a number, k, as a parameter.
+    // Return the node’s value that is k from the end of the linked list
+    public void kthFromEnd(int k) {
+        Node<T> mainPtr = this.head;
+        Node<T> current = this.head;
+        int count = 0;
+
+        if(k <= 0){
+            System.out.println("k is invalid number");
+        }
+
+        if(this.head != null){
+            while(count < k) {
+                if(current == null) {
+                    System.out.println(k + " is greater than the length of the linked list.");
+                    return;
+                }
+                current = current.getNextNode();
+                count++;
+            }
+            while(current != null) {
+                mainPtr = mainPtr.getNextNode();
+                current = current.getNextNode();
+            }
+
+            System.out.println("node's value that is " + k + " from the end of the list is:  " + mainPtr.getValue());;
+        }
+
     }
 
     }
