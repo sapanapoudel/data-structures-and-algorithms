@@ -2,7 +2,8 @@ package code401challenges.linkedlist;
 
 public class LinkedList<T> {
     //Fields
-    private Node <T> head;
+    Node <T> head;
+    
 
     public LinkedList() {
         this.head = null;
@@ -83,20 +84,21 @@ public class LinkedList<T> {
     public void insertBefore(T newVal, T value) {
         Node<T> current = this.head;
         while(current.getNextNode() != null) {
-            if(current.getNextNode() == value) {
+            if(current.getNextNode().getValue() == value) {
                 Node<T> newNode = new Node<>(newVal, this.head);
                 newNode.setNextNode(current.getNextNode());
                 current.setNextNode(newNode);
 
             }
             current = current.getNextNode();
+            return;
         }
     }
 
     //InsertAfter
     public void insertAfter(T value, T newValue) {
         //Check if the given node is null
-        Node<T> current = (Node<T>) value;
+        Node<T> previousNode = Node<T>(value,this.head)
         if(current == null) {
             System.out.println("The previous node is null");
         }

@@ -8,10 +8,10 @@ public class Main {
         //System.out.println(list.toString());
         list.append(4);
         //System.out.println(list.toString());
-//        list.insertBefore(3, 4);
-//        System.out.println(list.toString());
-
-        list.insertAfter(6, 8);
+        list.insertBefore(3, 4);
         System.out.println(list.toString());
+
+//        list.insertAfter(6, 8);
+//        System.out.println(list.toString());
     }
 }
