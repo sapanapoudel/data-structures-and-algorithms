@@ -11,7 +11,7 @@ public class LinkedList<T> {
 
     //Insert node
     public  void insert (T value) {
-        LinkedList<Integer>list = new LinkedList();
+        LinkedList<Integer>list = new LinkedList<>();
         Node<T>  newNode = new Node<T>(value, this.head );
         this.head = newNode;
         }
@@ -99,20 +99,20 @@ public class LinkedList<T> {
 
     //method for the Linked List class that takes a number, k, as a parameter.
     // Return the node’s value that is k from the end of the linked list
-    public void kthFromEnd(int k) {
+    public T kthFromEnd(int k) {
         Node<T> mainPtr = this.head;
         Node<T> current = this.head;
         int count = 0;
 
-        if(k <= 0){
-            System.out.println("k is invalid number");
+        if(k <= 0 || k < 0){
+            throw new IndexOutOfBoundsException();
         }
 
         if(this.head != null){
             while(count < k) {
                 if(current == null) {
-                    System.out.println(k + " is greater than the length of the linked list.");
-                    return;
+
+                    throw new IndexOutOfBoundsException();
                 }
                 current = current.getNextNode();
                 count++;
@@ -122,9 +122,10 @@ public class LinkedList<T> {
                 current = current.getNextNode();
             }
 
-            System.out.println("node's value that is " + k + " from the end of the list is:  " + mainPtr.getValue());;
-        }
 
+//            System.out.println("node's value that is " + k + " from the end of the list is:  " + mainPtr.getValue());;
+        }
+        return  mainPtr.getValue();
     }
 
     }
