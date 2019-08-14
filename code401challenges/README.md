@@ -78,4 +78,23 @@ Create a methods which add new node with given value at the end of the linked li
 #### Solution 
 [Code](src/main/java/code401challenges/linkedlist)
 [Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
+  
 ![White board image](assets/linked-list white board.jpg)
+
+#### 6. k-th value from the end of a linked list.
+#### Challenge 
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+#### Source
+https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+#### Approach and Efficiency 
+1. Use two pointers; current and main and initialize both at head
+2. First move current pointer to kth element from head
+3. Now move both pointers one by one until main pointer reach to the end
+4. Now the main pointer will point to nth node from the end. Return the main pointer.
+
+#### Solution 
+[Code](src/main/java/code401challenges/linkedlist)
+[Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
+
+![White boarding](assets/findkthelementinLLfromEnd.jpg)
