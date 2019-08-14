@@ -4,8 +4,9 @@ package code401challenges.linkedlist;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-public class LinkedListTest {
+public class LinkedListTest<expected> {
     //================Test for Insert=================================================
     //Can successfully instantiate an empty linked list
     //Can properly insert into the linked list
@@ -101,30 +102,47 @@ public class LinkedListTest {
         //method for the Linked List class that takes a number, k, as a parameter.
         // Return the node’s value that is k from the end of the linked list
 
-    @Test public void kthFromEndTest_greaterLength() {
+    //Source: https://junit.org/junit4/faq.html#atests_7
+    @Test (expected=IndexOutOfBoundsException.class)
+    public void kthFromEndTest_greaterLength()  {
         LinkedList<Integer> list = new LinkedList();
         list.insert(6);
         list.insert(9);
+
         list.kthFromEnd(3);
-        assertEquals("3 is greater than the length of the linked list.",
-                "3 is greater than the length of the linked list.");
+    }
+
+    @Test (expected=IndexOutOfBoundsException.class)
+    public void kthFromEndTest_negative()  {
+        LinkedList<Integer> list = new LinkedList();
+        list.insert(6);
+        list.insert(9);
+
+        list.kthFromEnd(-3);
+    }
+
+
+    @Test (expected=IndexOutOfBoundsException.class)
+    public void kthFromEndTest_zer0()  {
+        LinkedList<Integer> list = new LinkedList();
+        list.insert(6);
+        list.insert(9);
+
+        list.kthFromEnd(0);
     }
 
     @Test public void kthFromEndTest_sameLength () {
         LinkedList<Integer> list = new LinkedList();
         list.insert(6);
         list.insert(9);
-        list.kthFromEnd(2);
-        assertEquals("node's value that is 2 from the end of the list is:  9",
-                "node's value that is 2 from the end of the list is:  9");
+
+        assertTrue(list.kthFromEnd(2).equals(9));
     }
 
     @Test public void kthFromEndTest_LLOfsize1 () {
         LinkedList<Integer> list = new LinkedList();
         list.insert(6);
-        list.kthFromEnd(1);
-        assertEquals("node's value that is 1 from the end of the list is:  6",
-                "node's value that is 1 from the end of the list is:  6");
+        assertTrue(list.kthFromEnd(1).equals(6));
     }
 
 }
