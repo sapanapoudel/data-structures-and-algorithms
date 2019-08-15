@@ -7,5 +7,6 @@
 4. [Linked-List](code401challenges/README.md)
 5. [LinkedList. append, addBefore, addAfter](code401challenges/README.md)
 6. [k-th value from the end of a linked list](code401challenges/README.md)
+7. [Merge two linked lists](code401challenges/README.md)
     
 
