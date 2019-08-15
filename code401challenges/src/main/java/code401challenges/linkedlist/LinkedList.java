@@ -83,7 +83,7 @@ public class LinkedList<T> {
     }
 
     //Insert After
-    public void insertafter(T newValue, T curValue) {
+    public void insertAfter(T newValue, T curValue) {
         Node<T> newNode = new Node<T>(newValue, null);
         Node<T> current = this.head;
         while(current != null) {
@@ -105,7 +105,7 @@ public class LinkedList<T> {
         int count = 0;
 
         if(k <= 0 || k < 0){
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("k cannot be negative.");
         }
 
         if(this.head != null){
@@ -122,10 +122,43 @@ public class LinkedList<T> {
                 current = current.getNextNode();
             }
 
-
-//            System.out.println("node's value that is " + k + " from the end of the list is:  " + mainPtr.getValue());;
         }
         return  mainPtr.getValue();
+    }
+
+    //Method to merge two linked lists
+    public static LinkedList mergeLists(LinkedList listOne, LinkedList listTwo) {
+        Node currentFirst = listOne.head;
+        Node currentSecond = listTwo.head;
+        if(currentFirst == null) {
+            return listTwo;
+        }
+        if (currentSecond == null) {
+            return listOne;
+        }
+        Node  zPointer = currentFirst;
+        Node tPointer = currentFirst;
+        currentFirst = currentFirst.getNextNode();
+        while(currentFirst != null && currentSecond != null) {
+            tPointer.setNextNode(currentSecond);
+            currentSecond = currentSecond.getNextNode();
+            tPointer = tPointer.getNextNode();
+            tPointer.setNextNode(currentFirst);
+            currentFirst = currentFirst.getNextNode();
+            tPointer = tPointer.getNextNode();
+        }
+
+        if(currentSecond != null) {
+            tPointer.setNextNode(currentSecond);
+        }
+        else if (currentFirst != null) {
+            tPointer.setNextNode(currentFirst);
+        }
+        else {
+            tPointer.setNextNode(null);
+        }
+        listOne.head = zPointer;
+        return  listOne;
     }
 
     }

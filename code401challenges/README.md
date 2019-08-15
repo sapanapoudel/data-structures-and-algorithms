@@ -99,3 +99,21 @@ https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
 [Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
 
 ![White boarding](assets/findkthelementinLLfromEnd.jpg)
+
+## 7: Merge two linked lists.
+#### Challenge 
+Write a method that takes two linked lists as parameters, merge them together and return reference to the head of single merged linked list.
+
+#### Approach and Efficiency
+1. Use two pointers both reference to the head of first node, but move only one while another one always point to the haed of first list.
+2. If the first list is empty, return second one, if second one is empty, return first one.
+3. While both are not empty, When current first is moved to current second, move one pointer the current second also
+4. When moving  pointer hit the null, return another pointer referencing to head of first list. 
+
+Time Complexity = O(n)
+Space Complexity = O(1)
+#### Solution
+[Code](src/main/java/code401challenges/linkedlist)
+[Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
+
+![White board](assets/MergeLL_White_Board.jpg)
