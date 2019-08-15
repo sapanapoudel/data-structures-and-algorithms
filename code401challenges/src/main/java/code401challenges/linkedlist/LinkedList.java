@@ -127,17 +127,17 @@ public class LinkedList<T> {
     }
 
     //Method to merge two linked lists
-    public static LinkedList mergeLists(LinkedList listOne, LinkedList listTwo) {
-        Node currentFirst = listOne.head;
-        Node currentSecond = listTwo.head;
+    public static<F> LinkedList<F> mergeLists(LinkedList<F> listOne, LinkedList<F> listTwo) {
+        Node<F> currentFirst = listOne.head;
+        Node<F> currentSecond = listTwo.head;
         if(currentFirst == null) {
             return listTwo;
         }
         if (currentSecond == null) {
             return listOne;
         }
-        Node  zPointer = currentFirst;
-        Node tPointer = currentFirst;
+        Node<F>  zPointer = currentFirst;
+        Node<F> tPointer = currentFirst;
         currentFirst = currentFirst.getNextNode();
         while(currentFirst != null && currentSecond != null) {
             tPointer.setNextNode(currentSecond);
