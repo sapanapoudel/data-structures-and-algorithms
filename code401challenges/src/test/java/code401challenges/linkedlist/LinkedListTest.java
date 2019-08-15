@@ -186,4 +186,11 @@ public class LinkedListTest<expected> {
                 LinkedList.mergeLists(list1, list2).toString());
 
     }
+    //Test: When both empty lists 
+    @Test public void mergeListsTest_bothEmpty() {
+        LinkedList<Integer> list1 = new LinkedList<>();
+        LinkedList<Integer> list2 = new LinkedList<>();
+        assertEquals("should be equal", "HEAD--> null",
+                LinkedList.mergeLists(list1, list2).toString());
+    }
 }
