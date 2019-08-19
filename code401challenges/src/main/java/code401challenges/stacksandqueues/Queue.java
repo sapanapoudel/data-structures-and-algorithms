@@ -9,11 +9,6 @@ public class Queue <T> {
         this.front = null;
     }
 
-//    public Queue(Node<T> front) {
-//        this.front = front;
-//    }
-//    public Queue(){this.front = null;}
-
     public Node<T> getFront() {
         return front;
     }
