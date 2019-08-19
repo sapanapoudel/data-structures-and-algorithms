@@ -9,7 +9,7 @@ public class QueueTest {
     @Test public void queueTest_initiateEmptyQueue() {
         Queue<Integer> newQueue  = new Queue<>(null, null);
         newQueue.enqueue(2);
-        assertEquals("Should be equal", "Front--> 2 <--null", newQueue.toString());
+        assertEquals("Should be equal", "Front--> 2 <--Rear", newQueue.toString());
     }
 
     //successfully enqueue multiple values into a queue
@@ -17,7 +17,7 @@ public class QueueTest {
         Queue<Integer> newQueue  = new Queue<>(null, null);
         newQueue.enqueue(2);
         newQueue.enqueue(1);
-        assertEquals("Should be equal", "Front--> 2--> 1 <--null", newQueue.toString());
+        assertEquals("Should be equal", "Front--> 2--> 1 <--Rear", newQueue.toString());
     }
 
     //successfully dequeue out of a queue the expected value
@@ -67,7 +67,7 @@ public class QueueTest {
         newQueue.dequeue();
         newQueue.dequeue();
         newQueue.dequeue();
-        assertEquals("Should be equal", "Front <--null", newQueue.toString());
+        assertEquals("Should be equal", "Front <--Rear", newQueue.toString());
     }
 
 

@@ -35,7 +35,7 @@ public class Queue <T> {
             result = result +  "--> " + current.getValue();
             current = current.getNextNode();
         }
-        result = result + " <--null";
+        result = result + " <--Rear";
         return result;
     }
 
