@@ -192,4 +192,14 @@ public class LinkedListTest {
         assertEquals("should be equal", "HEAD--> null",
                 LinkedList.mergeLists(list1, list2).toString());
     }
+
+    //Test for reverse linked list
+    @Test public void reverseLinkedListTest() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.reverseLinkedList(1);
+    }
+
 }
