@@ -161,5 +161,50 @@ public class LinkedList<T> {
         return  listOne;
     }
 
+    //Recursive Methods for Merging
+    public static Node merge(Node head1, Node head2) {
+        if(head1 == null) {
+            return head2;
+        } else if(head2 == null) {
+            return head1;
+        } else {
+            Node restOfTheListsList = merge(head1.getNextNode(), head2.getNextNode());
+            head1.setNextNode(head2);
+            head2.setNextNode(restOfTheListsList);
+            return  head1;
+        }
+
+
+    }
+
+    //Another Version
+    public static Node merge_better(Node head1, Node head2) {
+        if(head1 == null) {
+            return head2;
+        } else {
+            head1.setNextNode(merge_better(head2, head1.getNextNode()));
+
+            return  head1;
+        }
+
+
+    }
+    //Reverse LinkedList
+    public Node reverseLinkedList(T head) {
+        Node <T> previous = null; //point at last null
+        Node<T> current = (Node<T>) head; //point at head
+        while(current != null) {                //n: Time complexity O(n)
+            Node temp = current.getNextNode(); //temp pointing at head.next
+            current.setNextNode(previous);
+            previous = current;
+            current = temp;
+
+        }
+        return previous;
+    }
+
+    //Palidrome
+
+
     }
 
