@@ -117,3 +117,21 @@ Space Complexity = O(1)
 [Test](src/test/java/code401challenges/linkedlist/LinkedListTest.java)
 
 ![White board](assets/MergeLL_White_Board.jpg)
+
+## 8: Implement a Stack and a Queue Data Structure
+#### Challenge 
+Create node, stack and queue classes and implement top, push, pop, peek, front, enqueue, dequeue, and peek methods.
+
+#### Approach and Efficiency
+1. Create a Node class with value and next node
+2. Create Stack class that defines methods called push, pop, and peek
+3. Create Queue class that defines methods called Enqueue, Dequeue, and peek
+
+Time complexities of all these methods are O(1)
+
+#### Solution 
+[Code for Stack](src/main/java/code401challenges/stacksandqueues/Stack.java) |
+[Test for Stack](src/test/java/code401challenges/stacksandqueues/StackTest.java)
+  
+[Code for Queue](src/main/java/code401challenges/stacksandqueues/Queue.java) |
+[Test for Queue](src/test/java/code401challenges/stacksandqueues/QueueTest.java)
