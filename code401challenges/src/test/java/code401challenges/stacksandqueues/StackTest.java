@@ -55,4 +55,12 @@ public class StackTest {
         assertEquals(1,  res);
     }
 
+    @Test public void peekEmptyTest() {
+        Stack<Integer> newStack = new Stack<>(null);
+        System.out.println(newStack.peek());
+//        int res = newStack.peek().getValue();
+//        System.out.println(res);
+//        assertEquals(1,  res);
+    }
+
 }

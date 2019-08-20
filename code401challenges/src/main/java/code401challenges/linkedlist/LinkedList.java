@@ -174,7 +174,6 @@ public class LinkedList<T> {
             return  head1;
         }
 
-
     }
 
     //Another Version
@@ -186,7 +185,6 @@ public class LinkedList<T> {
 
             return  head1;
         }
-
 
     }
     //Reverse LinkedList
@@ -202,9 +200,6 @@ public class LinkedList<T> {
         }
         return previous;
     }
-
-    //Palidrome
-
 
     }
 
