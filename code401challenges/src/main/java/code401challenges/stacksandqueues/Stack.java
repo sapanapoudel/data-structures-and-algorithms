@@ -7,6 +7,10 @@ public class Stack <T>{
         this.top = null;
     }
 
+    public Stack() {
+        this.top = null;
+    }
+
     public Node<T> getTop() {
         return top;
     }
@@ -35,7 +39,10 @@ public class Stack <T>{
     }
 
     //Method called pop to remove node from stack
-    public Node<T> pop() {
+    public Node<T> pop() throws NullPointerException{
+        if(this.peek() == null) {
+            throw new NullPointerException();
+        }
         Node<T> temp = this.top;
         this.top = top.getNextNode();
         temp.setNextNode(null);
@@ -44,6 +51,9 @@ public class Stack <T>{
 
     //Method called Peek to view top node
     public Node<T> peek() {
-        return this.top;
+        if(this.top == null) {
+            return null;
+        }
+        return (Node<T>) this.top;
     }
 }

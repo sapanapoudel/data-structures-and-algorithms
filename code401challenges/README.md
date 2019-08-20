@@ -135,3 +135,21 @@ Time complexities of all these methods are O(1)
   
 [Code for Queue](src/main/java/code401challenges/stacksandqueues/Queue.java) |
 [Test for Queue](src/test/java/code401challenges/stacksandqueues/QueueTest.java)
+
+
+## 9: Implement a Queue using two Stacks
+#### Challenge 
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects
+
+#### Approach and Efficiency 
+1. Create a method that takes 2 stacks as parameters 
+2. Create enqueue method to push value in one stack1
+3. Create dequeue method to pop value from stack2
+
+Time complexity: for Enqueue is O(1)
+Time complexity: for Dequeue is O(n)
+
+#### Solution
+[Code](src/main/java/code401challenges/stacksandqueues/PseudoQueue.java)  |
+[Test](src/test/java/code401challenges/stacksandqueues/PseudoQueueTest.java)
+![White board image](assets/implement_queue_with_stack.jpg)
