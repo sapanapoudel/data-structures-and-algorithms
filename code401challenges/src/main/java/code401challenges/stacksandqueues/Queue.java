@@ -1,10 +1,12 @@
 package code401challenges.stacksandqueues;
 
+import code401challenges.utilities.Animal;
+
 public class Queue <T> {
     private Node<T> front;
     private Node<T> rear;
 
-    public Queue(Node<T> front, Node<T> rear) {
+    public Queue() {
         this.rear = null;
         this.front = null;
     }
@@ -21,9 +23,6 @@ public class Queue <T> {
         return rear;
     }
 
-    public void setRear(Node<T> rear) {
-        this.rear = rear;
-    }
 
     //toString method
 
@@ -54,6 +53,9 @@ public class Queue <T> {
     }
 
     public Node <T> dequeue() {
+        if(this.peek() == null) {
+            throw new NullPointerException("Queue is empty");
+        }
         Node<T> temp = this.front;
         this.front = this.front.getNextNode();
         temp.setNextNode(null);

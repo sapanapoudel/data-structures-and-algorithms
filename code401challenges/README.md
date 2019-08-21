@@ -153,3 +153,31 @@ Time complexity: for Dequeue is O(n)
 [Code](src/main/java/code401challenges/stacksandqueues/PseudoQueue.java)  |
 [Test](src/test/java/code401challenges/stacksandqueues/PseudoQueueTest.java)
 ![White board image](assets/implement_queue_with_stack.jpg)
+
+## 10. First-in, First out Animal Shelter.
+#### Challenge
+* Create a class called AnimalShelter that takes Animal Object with dog and cat type
+* Implement enqueue method that takes Animal type and add it at dog queue or cat queue
+* Implement dequeue method that takes animal type and remove from type queue
+
+#### Approach and Efficiency 
+1. Create class called Animal with type field
+2. Create AnimalShelter class that implement and enqueue and dequeue methods on cat Queue and dog queue
+
+Enqueue method
+  
+Time Complexity: O(1)
+  
+Space Complexity: O(1)
+
+Dequeue method
+  
+Time Complexity: O(1)
+  
+Space Complexity: O(1)
+
+#### Solution 
+[Code](src/main/java/code401challenges/utilities) |
+[Test](src/test/java/code401challenges/utilities/AnimalShelterTest.java)
+![White board image](assets/Animal_shelter.jpg)
+
