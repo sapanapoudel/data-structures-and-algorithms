@@ -10,5 +10,6 @@
 7. [Merge two linked lists](code401challenges/README.md)
 8. [Implement a Stack and a Queue Data Structure](code401challenges/README.md)
 9. [Implement a Queue using two Stacks](code401challenges/README.md)
+10. [First-in, First out Animal Shelter](code401challenges/README.md)
     
 
