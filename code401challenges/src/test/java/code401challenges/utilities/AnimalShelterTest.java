@@ -56,4 +56,11 @@ public class AnimalShelterTest {
         assertEquals("preference is not dog or cat", test.dequeue(cow));
     }
 
+    @Test(expected = NullPointerException.class)
+    public void dequeueTest_emptyTest() {
+        Animal dog = new Animal("dog");
+        AnimalShelter test = new AnimalShelter();
+        test.dequeue(dog);
+    }
+
 }
