@@ -26,6 +26,12 @@ public class StackTest {
         assertEquals("Should be same","TOP--> 1--> null" , newStack.toString());
     }
 
+    @Test public void pushTest_forCharacter() {
+        Stack<Character> newStack = new Stack<>();
+        newStack.push('a');
+        System.out.println(newStack.toString());
+    }
+
     //Test for successfully pop off the stack
     @Test public void popTest() {
         Stack<Integer> newStack = new Stack<>(null);
@@ -55,12 +61,10 @@ public class StackTest {
         assertEquals(1,  res);
     }
 
-    @Test public void peekEmptyTest() {
+    @Test public void isEmptyTest() {
         Stack<Integer> newStack = new Stack<>(null);
-        System.out.println(newStack.peek());
-//        int res = newStack.peek().getValue();
-//        System.out.println(res);
-//        assertEquals(1,  res);
+        assertTrue(newStack.isEmpty());
     }
+
 
 }
