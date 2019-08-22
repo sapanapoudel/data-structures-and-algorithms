@@ -19,7 +19,7 @@ public class PseudoQueue <T>{
             stack2.pop();
         }
 
-        return (Node<T>) stack2.peek().getValue();
+        return (Node<T>) stack2.peek();
 
     }
 }

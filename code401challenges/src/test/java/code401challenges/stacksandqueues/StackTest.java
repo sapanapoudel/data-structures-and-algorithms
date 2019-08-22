@@ -57,7 +57,7 @@ public class StackTest {
         Stack<Integer> newStack = new Stack<>(null);
         newStack.push(2);
         newStack.push(1);
-        int res = newStack.peek().getValue();
+        int res = newStack.peek();
         assertEquals(1,  res);
     }
 
