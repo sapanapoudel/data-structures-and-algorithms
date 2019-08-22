@@ -39,22 +39,22 @@ public class Stack <T>{
     }
 
     //Method called pop to remove node from stack
-    public Node<T> pop() throws NullPointerException{
+    public T pop() throws NullPointerException{
         if(this.peek() == null) {
             throw new NullPointerException();
         }
         Node<T> temp = this.top;
         this.top = top.getNextNode();
         temp.setNextNode(null);
-        return temp;
+        return temp.getValue();
     }
 
     //Method called Peek to view top node
-    public Node<T> peek() {
+    public T peek() {
         if(this.top == null) {
             return null;
         }
-        return (Node<T>) this.top;
+        return  this.top.getValue();
     }
 
     public boolean isEmpty() {
