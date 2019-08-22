@@ -56,4 +56,8 @@ public class Stack <T>{
         }
         return (Node<T>) this.top;
     }
+
+    public boolean isEmpty() {
+        return this.top == null;
+    }
 }

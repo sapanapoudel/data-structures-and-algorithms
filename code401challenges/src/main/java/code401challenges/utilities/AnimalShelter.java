@@ -17,7 +17,7 @@ public class AnimalShelter {
             catQ.enqueue(animal);
             message = "cat is added successfully";
         } else {
-            message = "it has to be either dog or cat";
+            throw new IllegalArgumentException("is not a preferred type");
         }
         return message;
     }
@@ -25,18 +25,17 @@ public class AnimalShelter {
     public String dequeue(Animal animal) {
         String message = "";
         if(!animal.type.equals("dog") && !animal.type.equals("cat")) {
-            message = "preference is not dog or cat";
+            throw new IllegalArgumentException( "preference is not dog or cat");
         }
          else if(animal.type == "dog"){
             dogQ.dequeue();
             message = "remove dog successfully";
-        } else  {
+        } else if(animal.type == "cat") {
             catQ.dequeue();
             message = "remove cat successfully";
         }
         return message;
 
     }
-
-
+    
 }

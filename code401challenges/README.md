@@ -181,3 +181,22 @@ Space Complexity: O(1)
 [Test](src/test/java/code401challenges/utilities/AnimalShelterTest.java)
 ![White board image](assets/Animal_shelter.jpg)
 
+## lab11: Multi-bracket Validation
+#### Challenge
+Write a function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced
+
+#### Approach and Efficiency 
+1. Create a empty character stack 
+2. Traverse through each character of input string 
+3. If the character is opening bracket; (, {, [, push it to the stack
+4. If the character is closing bracket; ), }, ], pop opening bracket from stack and match to see if they are the set, and return true.
+5. After complete traversal, if there is some starting bracket left in stack then return false
+
+Time and Space Complexity: O(n) and O(n) for crating stack
+
+#### Solution
+[Code](src/main/java/code401challenges/utilities/MultiBracketValidation.java) |
+[Test](src/test/java/code401challenges/utilities/MultiBracketValidationTest.java)
+![White board image](assets/match_bracket.jpg)
+
+

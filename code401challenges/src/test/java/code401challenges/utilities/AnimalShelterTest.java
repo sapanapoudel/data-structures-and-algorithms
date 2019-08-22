@@ -21,11 +21,11 @@ public class AnimalShelterTest {
 
     }
 
-    @Test
+    @Test(expected =  IllegalArgumentException.class)
     public void enqueueTest_noDogOrNoCat() {
         Animal cow = new Animal("cow");
         AnimalShelter test = new AnimalShelter();
-        assertEquals("it has to be either dog or cat", test.enqueue(cow));
+//        assertEquals("it has to be either dog or cat", test.enqueue(cow));
     }
 
     @Test
@@ -48,12 +48,11 @@ public class AnimalShelterTest {
         assertEquals("remove cat successfully", test.dequeue(cat1));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void dequeueTest_removeCow() {
         Animal cow = new Animal("cow");
         AnimalShelter test = new AnimalShelter();
         test.enqueue(cow);
-        assertEquals("preference is not dog or cat", test.dequeue(cow));
     }
 
     @Test(expected = NullPointerException.class)
