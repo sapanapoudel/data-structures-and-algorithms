@@ -16,11 +16,14 @@ public class ArrayReverse {
   // Creating new Array 
   public static void reverseArray(int[] arr, int n) {
     int[] newArray = new int[n];
-    int j = n;
-    for (int i = 0; i < n; i++) {
-      newArray[j - 1] = arr[i];
-      j = j - 1;
+    for(int i = 0; i < n; i++) {
+      newArray[i] = arr[n-1-i];
     }
+//    int j = n;
+//    for (int i = 0; i < n; i++) {
+//      newArray[j - 1] = arr[i];
+//      j = j - 1;
+//    }
     System.out.println("Reverse array is: \n");
 
     System.out.println(Arrays.toString(newArray));
@@ -30,9 +33,11 @@ public class ArrayReverse {
   //Swapping method in a same array
   public static void anotherReverseArray(int[] arr, int n){
     for(int i = 0; i < n/2; i++){
+      arr[i] = arr[n-1-i];
       int j = arr[i];
       arr[i] = arr[n - 1 - i];
       arr[n - 1 - i] = j;
+      j = n - 1 - i;
     }
     System.out.println("Reverse array is: \n");
 

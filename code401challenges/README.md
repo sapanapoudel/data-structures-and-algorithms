@@ -199,4 +199,20 @@ Time and Space Complexity: O(n) and O(n) for crating stack
 [Test](src/test/java/code401challenges/utilities/MultiBracketValidationTest.java)
 ![White board image](assets/match_bracket.jpg)
 
+## lab15: Trees
+#### Resources 
+Source: https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435914#content
+  
+Classmate: Padma 
+#### Challenge
+Implement Binary tree
+
+#### Approach 
+1. Create Node class with data, left child and right child 
+2. Create Tree class with root and also has in-order, pre-order, and post-order traverse methods
+3. Create Binary Search Tree with add and contain methods and it also extends Tree class in order to access Traverse methods
+
+#### Solution 
+[Code](src/main/java/code401challenges/tree) |
+[Test](src/test/java/code401challenges/tree/BinarySearchTreeTest.java)
 
