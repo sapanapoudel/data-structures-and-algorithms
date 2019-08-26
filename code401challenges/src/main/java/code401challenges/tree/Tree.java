@@ -1,60 +1,54 @@
 package code401challenges.tree;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Tree {
     private Node root;
 
-    //Pre-order method
-    public List<Integer> preOrder(Node root) {
-        List<Integer> nodeValue = new ArrayList<Integer>();
-        if(root != null){
-            preOrder(root);
-        }
-        System.out.println(nodeValue.add(root.getData()));
-        if(root.getLeftChildNode() != null) {
-            preOrder(root.getLeftChildNode());
-        }
-        if(root.getRightChildNode() != null) {
-            preOrder(root.getRightChildNode());
-        }
-        return nodeValue;
-
+    public Tree() {
+        this.root = null;
     }
 
-    //In-order Traverse Method
-    public List<Integer> inOrder(Node root) {
-        List<Integer> nodeValue = new ArrayList<>();
-        if(root != null){
-            inOrder(root);
+    //Traverse Binary Search Tree in-order
+    public List<Integer> inOrder(Node root, List<Integer> nodeValue) {
+        if(root == null) {
+            return nodeValue;
         }
-
-        if(root.getLeftChildNode() != null) {
-            inOrder(root.getLeftChildNode());
-        }
-        System.out.println(nodeValue.add(root.getData()));
-        if(root.getRightChildNode() != null) {
-            inOrder(root.getRightChildNode());
+        else {
+            inOrder(root.getLeftChildNode(), nodeValue);
+            nodeValue.add(root.getData());
+            inOrder(root.getRightChildNode(), nodeValue);
         }
         return nodeValue;
     }
 
-    //Post-order Traverse Method
-    public List<Integer> postOrder(Node root) {
-        List<Integer> nodeValue = new ArrayList<>();
-        if(root != null){
-            postOrder(root);
-        }
-        if(root.getLeftChildNode() != null) {
-            postOrder(root.getLeftChildNode());
-        }
-        if(root.getRightChildNode() != null) {
-            postOrder(root.getRightChildNode());
 
+    //Traverse Binary Search Tree pre-order
+    public List<Integer> preOrder(Node root, List<Integer> nodeValue) {
+        if(root == null) {
+            return nodeValue;
         }
-        System.out.println(nodeValue.add(root.getData()));
+        else {
+            nodeValue.add(root.getData());
+            preOrder(root.getLeftChildNode(), nodeValue);
+            preOrder(root.getRightChildNode(), nodeValue);
+        }
         return nodeValue;
     }
+
+    //Traverse Binary Search Tree Post-order
+    public List<Integer> postOrder(Node root, List<Integer> nodeValue) {
+        if(root == null) {
+            return nodeValue;
+        } else {
+            postOrder(root.getLeftChildNode(), nodeValue);
+            postOrder(root.getRightChildNode(), nodeValue);
+            nodeValue.add(root.getData());
+        }
+      return nodeValue;
+    }
+
+
+
 
 }

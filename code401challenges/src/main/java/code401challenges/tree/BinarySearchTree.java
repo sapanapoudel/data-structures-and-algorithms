@@ -1,70 +1,55 @@
 package code401challenges.tree;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class BinarySearchTree {
+public class BinarySearchTree extends Tree {
     private Node root;
 
-    public void add(int value) {
-        if(value == root.getData()){
-            return;
-        }
-        if(value < root.getData()){
-            if(root.getLeftChildNode() == null) {
-                root.setLeftChildNode(new Node(value));
-            } else {
-                root.getRightChildNode().setData(value);
-                //I can not call add method, recursively???
-                //root.getRightChildNode().add(value);
-            }
-
-        }
-        else {
-            if(root.getRightChildNode() == null) {
-                root.setRightChildNode(new Node(value));
-            } else {
-                root.getRightChildNode().setData(value);
-                //I can not call add method, recursively???
-                //root.getRightChildNode().add(value);
-            }
-        }
-
-
-
+    public BinarySearchTree() {
+        super();
+        this.root = null;
     }
 
-    //In-order Traverse Method
-    public List<Integer> inOrder(Node root) {
-        List<Integer> nodeValue = new ArrayList<>();
-        if(root != null){
-            inOrder(root);
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
+
+    public void add(int value) {
+        if(root == null) {
+            root = new Node(value);
+        } else {
+            addToHelper(value, root);
+        }
+    }
+
+    public Node addToHelper(int value, Node root) {
+        if(root == null) {
+            return new Node(value);
         }
 
-        if(root.getLeftChildNode() != null) {
-            inOrder(root.getLeftChildNode());
+        if(value < root.getData()){
+            root.setLeftChildNode(addToHelper(value, root.getLeftChildNode()));
+        } else if (value > root.getData()) {
+            root.setRightChildNode(addToHelper(value, root.getRightChildNode()));
         }
-        System.out.println(nodeValue.add(root.getData()));
-        if(root.getRightChildNode() != null) {
-            inOrder(root.getRightChildNode());
-        }
-        return nodeValue;
+
+        return root;
     }
 
     //Contain Method
-//    public boolean contain(int value) {
-//        if(value == root.getData()) {
-//            return true;
-//        }
-//        if(value < root.getData())
-//    }
-
-
-
-
-
-
-
-
+    public boolean contain(Node root, int value) {
+       if(root == null) {
+           return false;
+       }
+       if(root.getData() == value) {
+           return true;
+       }
+       if(value < root.getData()){
+           return contain(root.getLeftChildNode(), value);
+       } else {
+           return contain(root.getRightChildNode(), value);
+       }
+    }
 }
