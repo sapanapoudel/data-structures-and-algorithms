@@ -5,7 +5,6 @@ public class BinarySearchTree extends Tree {
 
     public BinarySearchTree() {
         super();
-        this.root = null;
     }
 
     public Node getRoot() {
