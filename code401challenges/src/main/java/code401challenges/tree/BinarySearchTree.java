@@ -1,6 +1,6 @@
 package code401challenges.tree;
 
-public class BinarySearchTree extends Tree {
+public class BinarySearchTree extends Tree<Integer> {
     private Node root;
 
     public BinarySearchTree() {
@@ -23,7 +23,7 @@ public class BinarySearchTree extends Tree {
         }
     }
 
-    public Node addToHelper(int value, Node root) {
+    public Node addToHelper(int value, Node<Integer> root) {
         if(root == null) {
             return new Node(value);
         }
@@ -38,7 +38,7 @@ public class BinarySearchTree extends Tree {
     }
 
     //Contain Method
-    public boolean contain(Node root, int value) {
+    public boolean contain(Node<Integer> root, int value) {
        if(root == null) {
            return false;
        }

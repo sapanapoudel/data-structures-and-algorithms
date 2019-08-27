@@ -213,6 +213,29 @@ Implement Binary tree
 3. Create Binary Search Tree with add and contain methods and it also extends Tree class in order to access Traverse methods
 
 #### Solution 
-[Code](src/main/java/code401challenges/tree) |
+[Code](src/main/java/code401challenges/tree/BinarySearchTree.java) |
 [Test](src/test/java/code401challenges/tree/BinarySearchTreeTest.java)
 
+## Code challenge: fizzBuzz in Tree
+#### Challenge
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+Return the tree with its new values.
+
+#### Approach
+1. Create a helper function that takes node with generic type 
+2. If current node is not null, it will compare the value and replace them appropriately
+3. Call the same function recursively on left and right node
+4. Create another function that takes tree as argument and return tree of object type
+5. Inside this function, helper function is called on root of that tree. 
+
+Time Complexity: O(1)
+Space Complexity: O(n)
+
+#### Solution 
+[Code](src/main/java/code401challenges/utilities/FizzBuzzTree.java) |
+[Test](src/test/java/code401challenges/utilities/FizzBuzzTreeTest.java)
+![White board image](assets/fizzBuzzTree.jpg)
