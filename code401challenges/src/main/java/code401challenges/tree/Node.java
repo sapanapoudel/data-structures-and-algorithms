@@ -1,22 +1,22 @@
 package code401challenges.tree;
 
-public class Node {
-    private int data;
+public class Node<T> {
+    private T data;
     private Node leftChildNode;
     private Node rightChildNode;
 
     //Constructor
-    public Node( int data) {
+    public Node( T data) {
         this.data = data;
     }
 
     //Getter and Setter
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setData(T data) {
+        this.data =  data;
     }
 
     public Node getLeftChildNode() {
