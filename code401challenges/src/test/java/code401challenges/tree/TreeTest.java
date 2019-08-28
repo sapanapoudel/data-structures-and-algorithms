@@ -1,0 +1,30 @@
+package code401challenges.tree;
+
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class TreeTest {
+    @Test public void breadthFirstTraverseTest() {
+        Tree<Integer> newTree = new Tree<Integer>();
+        newTree.addAtNextOpenSpot(1);
+        newTree.addAtNextOpenSpot(2);
+        newTree.addAtNextOpenSpot(3);
+        newTree.addAtNextOpenSpot(4);
+        newTree.addAtNextOpenSpot(5);
+
+        List<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(5);
+
+        assertEquals(arrayList, newTree.breadthFirstTraverse(newTree));
+
+    }
+
+}

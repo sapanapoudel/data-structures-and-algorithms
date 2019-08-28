@@ -52,23 +52,22 @@ public class Queue <T> {
 
     }
 
-    public Node <T> dequeue() {
+    public T dequeue() {
         if(this.peek() == null) {
             throw new NullPointerException("Queue is empty");
         }
         Node<T> temp = this.front;
         this.front = this.front.getNextNode();
         temp.setNextNode(null);
-        return temp;
+        return temp.getValue();
     }
 
     public Node<T> peek() {
         return this.front;
     }
 
-
-
-
-
+    public boolean isEmpty() {
+        return this.front == null;
+    }
 
 }

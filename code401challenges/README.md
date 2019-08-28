@@ -216,7 +216,7 @@ Implement Binary tree
 [Code](src/main/java/code401challenges/tree/BinarySearchTree.java) |
 [Test](src/test/java/code401challenges/tree/BinarySearchTreeTest.java)
 
-## Code challenge: fizzBuzz in Tree
+## 16.Code challenge: fizzBuzz in Tree
 #### Challenge
 Write a function called FizzBuzzTree which takes a tree as an argument.
 Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
@@ -239,3 +239,20 @@ Space Complexity: O(n)
 [Code](src/main/java/code401challenges/utilities/FizzBuzzTree.java) |
 [Test](src/test/java/code401challenges/utilities/FizzBuzzTreeTest.java)
 ![White board image](assets/fizzBuzzTree.jpg)
+
+## 17. Breadth-first Traversal.
+#### Challenge
+Do the breadth-first traverse on the binary tree 
+  
+#### Approach 
+1. Write method which takes tree and return array list of node value
+2. Create empty queue and add the root of the tree
+3. Instantiate empty array list
+4. While the root is not empty, remove the root from queue and add left and right child in the queue at the same time. 
+Time Complexity: O(1)
+Space Complexity: O(n)
+#### Solution
+[Code](src/main/java/code401challenges/tree/Tree.java) |
+[Test](src/test/java/code401challenges/tree/TreeTest.java)
+  
+![white board image](assets/breadth-first-traverse.jpg)

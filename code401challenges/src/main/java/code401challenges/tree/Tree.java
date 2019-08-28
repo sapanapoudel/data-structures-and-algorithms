@@ -1,8 +1,8 @@
 package code401challenges.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import code401challenges.stacksandqueues.Queue;
+
+import java.util.*;
 
 public class Tree<T> {
     private Node<T> root;
@@ -85,5 +85,28 @@ public class Tree<T> {
     //Print  method
     public String print(Node root)  {
         return inOrder(root, new ArrayList<>()).toString();
+    }
+
+    //breadth first traversal method
+    //Input = root node
+    //Output = front node of queue to console
+    //Create empty queue and add root of the tree
+
+    public List breadthFirstTraverse(Tree newTree) {
+        Queue<Node> queue = new Queue<>();
+        List frontNodeValues = new ArrayList<>();
+        queue.enqueue(newTree.getRoot());
+
+        while(!queue.isEmpty()) {
+            Node current = queue.dequeue();
+            frontNodeValues.add(current.getData());
+            if(current.getLeftChildNode() != null){
+                queue.enqueue( current.getLeftChildNode());
+            }
+            if(current.getRightChildNode() != null) {
+                queue.enqueue(current.getRightChildNode());
+            }
+        }
+        return frontNodeValues;
     }
 }
