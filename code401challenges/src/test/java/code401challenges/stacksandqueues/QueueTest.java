@@ -24,7 +24,7 @@ public class QueueTest {
     @Test public void dequeueTest() {
         Queue<Integer> newQueue  = new Queue<>();
         newQueue.enqueue(1);
-        int res = newQueue.dequeue().getValue();
+        int res = newQueue.dequeue();
         assertEquals("Should be same", 1, res);
     }
 
@@ -35,7 +35,7 @@ public class QueueTest {
         newQueue.enqueue(4);
         newQueue.enqueue(6);
 
-        int res = newQueue.dequeue().getValue();
+        int res = newQueue.dequeue();
         assertEquals("Should be same", 2, res);
     }
 
