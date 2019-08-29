@@ -281,4 +281,4 @@ Space Complexity: O(1)
 [Code](src/main/java/code401challenges/tree/Tree.java) |
 [Test](src/test/java/code401challenges/tree/TreeTest.java)
   
-![White board image]()
+![White board image](assets/max_value_binary_tree.jpg)
