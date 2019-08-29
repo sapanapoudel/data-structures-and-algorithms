@@ -38,6 +38,14 @@ public class TreeTest {
 
     }
 
+    @Test public void findMaxValueTest_Root() {
+        Tree<Integer> newTree = new Tree<Integer>();
+        newTree.addAtNextOpenSpot(1);
+
+        assertEquals(1, newTree.findMaxValue(newTree.getRoot()));
+
+    }
+
     @Test public void findMaxValueTest_Empty(){
         Tree<Integer> newTree = new Tree<>();
         assertEquals(Integer.MIN_VALUE, newTree.findMaxValue(newTree.getRoot()));
@@ -50,6 +58,15 @@ public class TreeTest {
         newTree.addAtNextOpenSpot(3);
         newTree.addAtNextOpenSpot(4);
         newTree.addAtNextOpenSpot(5);
+        assertEquals(1, newTree.findMinValue(newTree.getRoot()));
+
+    }
+
+
+    @Test public void findMinValueTest_Root() {
+        Tree<Integer> newTree = new Tree<Integer>();
+        newTree.addAtNextOpenSpot(1);
+
         assertEquals(1, newTree.findMinValue(newTree.getRoot()));
 
     }
