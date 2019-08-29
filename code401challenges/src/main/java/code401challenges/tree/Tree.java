@@ -103,10 +103,45 @@ public class Tree<T> {
             if(current.getLeftChildNode() != null){
                 queue.enqueue( current.getLeftChildNode());
             }
-            if(current.getRightChildNode() != null) {
+            else if(current.getRightChildNode() != null) {
                 queue.enqueue(current.getRightChildNode());
             }
         }
         return frontNodeValues;
+    }
+
+    //Find the maximum value of the tree
+    public int findMaxValue(Node root) {
+       if(root == null) {
+           return Integer.MIN_VALUE;
+       }
+       int output = (int)root.getData();
+       int leftOutput = findMaxValue(root.getLeftChildNode());
+       int rightOutput = findMaxValue(root.getRightChildNode());
+       if(leftOutput > output){
+           output = leftOutput;
+       }
+       if(rightOutput > output) {
+           output = rightOutput;
+       }
+       return  output;
+
+    }
+
+    //Find the minimum value in the tree
+    public int findMinValue(Node root) {
+        if(root == null) {
+            return Integer.MAX_VALUE;
+        }
+        int output = (int)root.getData();
+        int outputOnLeft = findMinValue(root.getLeftChildNode());
+        int outputOnRight = findMinValue(root.getRightChildNode());
+        if(outputOnLeft < output) {
+            output = outputOnLeft;
+        }
+        if(outputOnRight < output) {
+            output = outputOnRight;
+        }
+        return  output;
     }
 }

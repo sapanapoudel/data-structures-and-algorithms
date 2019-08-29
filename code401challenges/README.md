@@ -185,6 +185,7 @@ Space Complexity: O(1)
 #### Challenge
 Write a function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced
 
+
 #### Approach and Efficiency 
 1. Create a empty character stack 
 2. Traverse through each character of input string 
@@ -256,3 +257,28 @@ Space Complexity: O(n)
 [Test](src/test/java/code401challenges/tree/TreeTest.java)
   
 ![white board image](assets/breadth-first-traverse.jpg)
+
+## 18. Find the Maximum Value in a Binary Tree
+#### Challenge 
+Write a method that takes root of the tree and find the maximum value in that binary tree.
+
+#### Resources
+* https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435916?start=15#content
+
+#### Approach and Efficiency 
+1. Write a method that takes root and return int value
+2. If root is null return min value of Integer
+3. Assign the root value on output
+3. Call the methods  recursively on left child and assign max value on output left
+4. Call the methods recursively on right child and assign max value on output right 
+5. Compare right and left value against output, reassign max vale  and return output
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+#### Solution
+[Code](src/main/java/code401challenges/tree/Tree.java) |
+[Test](src/test/java/code401challenges/tree/TreeTest.java)
+  
+![White board image]()
