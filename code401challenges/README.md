@@ -299,4 +299,4 @@ Space Complexity = O(1)
 [Code](src/main/java/code401challenges/insertion/Insertion.java) |
 [Test](src/test/java/code401challenges/insertion/InsertionTest.java) 
   
-[Blog](./../../data-structures-and-algorithms/BLOG.md)
+[Blog](../code401challenges/BLOG.md)
