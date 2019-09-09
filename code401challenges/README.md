@@ -282,3 +282,21 @@ Space Complexity: O(1)
 [Test](src/test/java/code401challenges/tree/TreeTest.java)
   
 ![White board image](assets/max_value_binary_tree.jpg)
+ 
+## lab26. Implement Insertion Sort
+#### Resources 
+https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435778#questions
+#### Approach and Efficiency
+1. First unsorted index starts at 1, which is the first index of the unsorted partition
+2. i = 0, index used to traverse the sorted partition from right to left 
+3. New element is the value we want to insert into the sorted partition, which is at firstUnsortedIndex
+4. It is a in-place algorithm 
+
+Time Complexity = O(n^2), Quadratic 
+It will take 100 steps to sort 10 items 
+Space Complexity = O(1)
+#### Solution 
+[Code](src/main/java/code401challenges/insertion/Insertion.java) |
+[Test](src/test/java/code401challenges/insertion/InsertionTest.java) 
+  
+[Blog](../../data-structures-and-algorithms/BLOG.md)

@@ -104,7 +104,7 @@ public class LinkedList<T> {
         Node<T> current = this.head;
         int count = 0;
 
-        if(k <= 0 || k < 0){
+        if(k <= 0){
             throw new IndexOutOfBoundsException("k cannot be negative.");
         }
 
