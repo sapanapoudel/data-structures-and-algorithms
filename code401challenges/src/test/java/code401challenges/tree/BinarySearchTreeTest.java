@@ -1,5 +1,6 @@
 package code401challenges.tree;
 
+import code401challenges.arraylist.BinarySearch;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -87,6 +88,29 @@ public class BinarySearchTreeTest {
         arrayList.add(40);
         arrayList.add(30);
         assertEquals(arrayList,intTree.postOrder(intTree.getRoot(), new ArrayList<>()) );
+
+    }
+
+    @Test public void sumOfAllOddValue_Test(){
+        BinarySearchTree tree = new BinarySearchTree();
+      tree.add(3);
+      tree.add(1);
+      tree.add(3);
+        System.out.println(tree.sumOfAllOddValue(tree.getRoot(), 0));
+    }
+
+    @Test public void compareFileTest() {
+        BinarySearchTree tree1 = new BinarySearchTree();
+        tree1.add(1);
+        tree1.add(4);
+        tree1.add(5);
+
+        BinarySearchTree tree2 = new BinarySearchTree();
+        tree2.add(6);
+        tree2.add(5);
+//        tree2.add(8);
+
+        System.out.println(tree1.compareFile(tree1.getRoot(), tree2.getRoot()));
 
     }
 

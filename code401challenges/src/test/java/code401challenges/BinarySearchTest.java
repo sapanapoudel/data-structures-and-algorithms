@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 public class BinarySearchTest {
     //***********Test for Iterative Binary search *******************
     @Test public void binarySearchTest() {
-        assertEquals(2,
-                BinarySearch.binarySearch(new int[]{1, 2, 3, 4, 5}, 3));
+        assertEquals(4,
+                BinarySearch.binarySearch(new int[]{1, 2, 3, 4, 5}, 5));
     }
 
     @Test public void binarySearch_notFound() {

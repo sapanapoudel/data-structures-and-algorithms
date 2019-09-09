@@ -1,5 +1,8 @@
 package code401challenges.stacksandqueues;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Stack <T>{
     private Node<T> top;
 
@@ -59,5 +62,23 @@ public class Stack <T>{
 
     public boolean isEmpty() {
         return this.top == null;
+    }
+
+    //Find max value in stack
+    public int max(Stack<Integer> stack){
+        int max = Integer.MIN_VALUE;
+        while(!stack.isEmpty()){
+            max = Math.max(stack.pop(), max);
+        }
+        return max;
+    }
+
+    //Find min value in stack
+    public int min(Stack<Integer> stack) {
+        int min = Integer.MAX_VALUE;
+        while(!stack.isEmpty()){
+            min = Math.min(stack.pop(), min);
+        }
+        return min;
     }
 }

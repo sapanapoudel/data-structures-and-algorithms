@@ -61,9 +61,30 @@ public class StackTest {
         assertEquals(1,  res);
     }
 
+    //Test empty stack
+    @Test public void peek_emptyStack() {
+        Stack<Integer> newStack = new Stack<>(null);
+        System.out.println(newStack.peek());
+    }
+
     @Test public void isEmptyTest() {
         Stack<Integer> newStack = new Stack<>(null);
         assertTrue(newStack.isEmpty());
+    }
+    @Test public void maxTest() {
+        Stack<Integer> newStack = new Stack<>(null);
+        newStack.push(2);
+        newStack.push(1);
+        newStack.push(10);
+        System.out.println(newStack.max(newStack));
+    }
+
+    @Test public void minTest() {
+        Stack<Integer> newStack = new Stack<>();
+        newStack.push(67);
+        newStack.push(10);
+        newStack.push(7);
+        System.out.println(newStack.min(newStack));
     }
 
 
