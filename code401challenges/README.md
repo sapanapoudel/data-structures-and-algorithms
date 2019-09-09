@@ -297,6 +297,7 @@ It will take 100 steps to sort 10 items
 Space Complexity = O(1)
 #### Solution 
 [Code](src/main/java/code401challenges/insertion/Insertion.java) |
-[Test](src/test/java/code401challenges/insertion/InsertionTest.java) 
-  
+[Test](src/test/java/code401challenges/insertion/InsertionTest.java) |
 [Blog](../code401challenges/BLOG.md)
+
+![White Board Image](assets/Insertion_sort.jpg)
