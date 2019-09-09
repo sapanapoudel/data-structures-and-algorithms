@@ -10,6 +10,8 @@ Unsorted Array: [14, 35, 27, 10, 19, 42, 44]
 * This process goes on until all the values at unsorted partition are in sorted partition and it breaks out of the loop. 
 
 Sorted Array: [10, 14, 19, 27, 35, 42, 44]
+#### Diagram
+![White Board Image](assets/Insertion_sort.jpg)
 
 #### Pseudocode 
  
