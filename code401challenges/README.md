@@ -328,7 +328,8 @@ Efficiency
 * It is a stable algorithm 
 #### Solution
 [Code](src/main/java/code401challenges/sort/Merge.java) |
-[Test](src/test/java/code401challenges/sort/MergeTest.java) 
+[Test](src/test/java/code401challenges/sort/MergeTest.java) |
+[Blog](../code401challenges/BLOG.md)
   
 ![white board image](assets/merge_sort2.jpg)
 ![Image on splitting and merging](assets/Merge-Sort1.png)
