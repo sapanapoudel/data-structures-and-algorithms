@@ -296,8 +296,40 @@ Time Complexity = O(n^2), Quadratic
 It will take 100 steps to sort 10 items 
 Space Complexity = O(1)
 #### Solution 
-[Code](src/main/java/code401challenges/insertion/Insertion.java) |
-[Test](src/test/java/code401challenges/insertion/InsertionTest.java) |
+[Code](src/main/java/code401challenges/sort/Insertion.java) |
+[Test](src/test/java/code401challenges/sort/InsertionTest.java) |
 [Blog](../code401challenges/BLOG.md)
 
 ![White Board Image](assets/Insertion_sort.jpg)
+
+## 27. Merge Sort 
+#### Resources 
+* [tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)
+* [geeksforgeeks](https://www.geeksforgeeks.org/merge-sort/)
+* [udemy](https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435790#overview)
+* [merge sort algorithm](https://www.youtube.com/watch?v=TzeBrDU-JaY)
+#### Approach and Efficiency
+Merge sort algorithm is based on divide and conquer. It divides input array into two halves, use recursion on them and merges back the two sorted halves. It has two phases; splitting and merging 
+
+Splitting Phase 
+* Start with unsorted array
+* Divide the array into two arrays; left array and right array
+* Keep splitting until all the arrays have only one element left
+
+Merging Phase
+* Merge every let/right pair of siblings arrays into a sorted array
+* After the first merge, there are lots of 2-element sorted arrays
+* Then merge those sorted arrays into two sorted arrays
+* Repeat the process until you have a single sorted array at the end
+
+Efficiency
+* It is not an in-place algorithm 
+* Time complexity in worst case is O(nlogn), we are repeatedly dividing the array into two halves in splitting phase
+* It is a stable algorithm 
+#### Solution
+[Code](src/main/java/code401challenges/sort/Merge.java) |
+[Test](src/test/java/code401challenges/sort/MergeTest.java) 
+  
+![white board image](assets/merge_sort2.jpg)
+![Image on splitting and merging](assets/Merge-Sort1.png)
+Image source: geeksforgeeks
