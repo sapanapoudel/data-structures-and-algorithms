@@ -13,7 +13,7 @@ Sorted Array: [10, 14, 19, 27, 35, 42, 44]
 #### Diagram
 ![White Board Image](assets/Insertion_sort.jpg)
 
-#### Pseudocode 
+#### Pseudo code 
  
 ```
 InsertionSort(int[] arr)
@@ -36,3 +36,76 @@ Read
 
 Video
 * [udemy](https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435772?start=0#questions)
+
+
+## Merge Sort
+Merge sort algorithm is based on divide and conquer. It divides input array into two halves, use recursion on them and merges back the two sorted halves. It has two phases; splitting and merging 
+
+Splitting Phase 
+* Start with unsorted array
+* Divide the array into two arrays; left array and right array
+* Keep splitting until all the arrays have only one element left
+
+Merging Phase
+* Merge every let/right pair of siblings arrays into a sorted array
+* After the first merge, there are lots of 2-element sorted arrays
+* Then merge those sorted arrays into two sorted arrays
+* Repeat the process until you have a single sorted array at the end
+#### Diagram 
+![white board image](assets/merge_sort2.jpg)
+![Image on splitting and merging](assets/Merge-Sort1.png)
+Image source: geeksforgeeks
+#### Pseudo code
+```
+merge(arr, left, right)
+    i, j, k = 0
+    while(i < left.length && j < right.length)
+        if(left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else 
+            arr[k] <-- right[j]
+            j <-- j + 1
+        k <-- k + 1
+    while(i < left.length)
+            arr[k] <-- left[i]
+            i <-- i + 1
+            k <-- k + 1
+    while(j < right.length)
+            arr[k] <-- right[j]
+            j <-- j + 1
+            k <-- k + 1
+
+mergeSort(arr)
+    n = arr.length
+    if(n > 1)
+        mid = n/2
+        left = array[mid]
+        right = array[n - mid]
+        for(i <-- 0 to mid - 1)
+            left[i] <-- arr[i]
+        for(i <-- mid to n-1)
+            right[i - mid] <-- arr[i]
+        mergeSort(left)
+        mergeSort(right)
+        merge(left, right, arr)
+
+```
+#### Efficiency 
+* It is not an in-place algorithm 
+* Time complexity in worst case is O(nlogn), we are repeatedly dividing the array into two halves in splitting phase
+* It is a stable algorithm 
+#### Resources 
+Read
+* [tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)
+* [geeksforgeeks](https://www.geeksforgeeks.org/merge-sort/)
+
+Video
+* [udemy](https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435790#overview)
+* [merge sort algorithm](https://www.youtube.com/watch?v=TzeBrDU-JaY)
+
+
+
+
+
+

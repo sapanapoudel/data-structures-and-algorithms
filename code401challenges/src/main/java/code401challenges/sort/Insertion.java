@@ -1,4 +1,4 @@
-package code401challenges.insertion;
+package code401challenges.sort;
 
 public class Insertion {
     public static int[] insertionSort(int[] arr) {

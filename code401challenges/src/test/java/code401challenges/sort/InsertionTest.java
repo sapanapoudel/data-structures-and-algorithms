@@ -1,5 +1,6 @@
-package code401challenges.insertion;
+package code401challenges.sort;
 
+import code401challenges.sort.Insertion;
 import org.junit.Test;
 
 import java.util.Arrays;
