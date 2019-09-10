@@ -9,8 +9,15 @@ import static org.junit.Assert.*;
 public class MergeTest {
 @Test public void mergeTest() {
     int[] arr = new int[]{34, -55, 76, 1, 9, -15, 100};
-    assertEquals(new int[]{-55, -15, 1, 9, 76, 100}, Merge.mergeSort(arr));
-//    assertArrayEquals(new int[]{-55, -15, 1, 9, 76, 100}, Arrays.toString(Merge.mergeSort(arr)));
-    System.out.println(Arrays.toString(Merge.mergeSort(arr)));
+    assertArrayEquals(new int[]{-55, -15, 1, 9, 34, 76, 100}, Merge.mergeSort(arr));
 }
+@Test public void mergeTest_empty(){
+    int[] arr = new int[]{};
+    assertArrayEquals(new int[]{}, Merge.mergeSort(arr));
+}
+@Test public void mergeTest_another(){
+    int[] arr = new int[]{60, -35, 8, 78};
+    assertArrayEquals(new int[]{-35, 8, 60, 78}, Merge.mergeSort(arr));
+}
+
 }
