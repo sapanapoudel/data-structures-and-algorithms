@@ -18,5 +18,6 @@
 15. [Find the Maximum Value in a Binary Tree](code401challenges/README.md)
 16. [Implement Insertion Sort](code401challenges/README.md)
 17. [Merge Sort](code401challenges/README.md)
+18. [Quick Sort](code401challenges/README.md)
  
 
