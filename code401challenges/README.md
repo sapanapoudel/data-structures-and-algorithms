@@ -334,3 +334,13 @@ Efficiency
 ![white board image](assets/merge_sort2.jpg)
 ![Image on splitting and merging](assets/Merge-Sort1.png)
 Image source: geeksforgeeks
+
+## 28. Quick Sort
+#### Resources 
+[Quick sort merge](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=8&t=0s)
+#### Approach and Efficiency 
+
+#### Solution
+[Code](src/main/java/code401challenges/sort/Quick.java) |
+[Test](src/test/java/code401challenges/sort/QuickTest.java) |
+[Blog](../code401challenges/BLOG.md)
