@@ -336,9 +336,21 @@ Efficiency
 Image source: geeksforgeeks
 
 ## 28. Quick Sort
+It is also a divide and conquer algorithm, so it uses recursive method.  
 #### Resources 
 [Quick sort merge](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=8&t=0s)
 #### Approach and Efficiency 
+* It uses a pivot element to partition the array into two halves
+* Elements < pivot will go to its left and elements > pivot go will got to its right
+* After partition, pivot will be in its sorted position, but left and right elements are not sorted
+* Above steps will repeat for left and right arrays 
+* Eventually every element has been a pivot and so every element will be in sorted order
+
+Efficiency:
+* Time complexity for worst case is O(n^2)
+* Time complexity for average case is O(nlogn)
+* In-place algorithm
+* It is an unstable algorithm
 
 #### Solution
 [Code](src/main/java/code401challenges/sort/Quick.java) |
