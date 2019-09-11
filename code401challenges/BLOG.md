@@ -104,8 +104,50 @@ Video
 * [udemy](https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/learn/lecture/8435790#overview)
 * [merge sort algorithm](https://www.youtube.com/watch?v=TzeBrDU-JaY)
 
+## Quick Sort
+It is also a divide and conquer algorithm, so it uses recursive method.  
+#### Resources 
+[Quick sort merge](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=8&t=0s)
+#### Approach and Efficiency 
+* It uses a pivot element to partition the array into two halves
+* Elements < pivot will go to its left and elements > pivot go will got to its right
+* After partition, pivot will be in its sorted position, but left and right elements are not sorted
+* Above steps will repeat for left and right arrays 
+* Eventually every element has been a pivot and so every element will be in sorted order
 
+Efficiency:
+* Time complexity for worst case is O(n^2)
+* Time complexity for average case is O(nlogn)
+* In-place algorithm
+* It is an unstable algorithm
+#### Pseudo code
+```
+Algorithm quickSort(arr, left, right)
+    if(left < right)
+        pIndex = partition(arr, left, right)
+        quickSort(arr, left, pIndex-1)
+        quickSort(arr, pIndex + 1, right)
 
+Algorithm partition(arr, left, right)
+    pivot = arr[end]
+    pIndex = left - 1
+    for i <-- start to end 
+        if(arr[i] <= pivot
+            swap(arr, i, pIndex)
+    swap(arr, right, pIndex+1)
+    return pIndex
+
+Algorithm swap(arr, i, pIndex)
+        temp = arr[i]
+        arr[i] = arr[pIndex]
+        arr[pIndex] = temp
+
+```
+
+#### Solution
+[Code](src/main/java/code401challenges/sort/Quick.java) |
+[Test](src/test/java/code401challenges/sort/QuickTest.java) |
+[Blog](../code401challenges/BLOG.md)
 
 
 
