@@ -19,5 +19,6 @@
 16. [Implement Insertion Sort](code401challenges/README.md)
 17. [Merge Sort](code401challenges/README.md)
 18. [Quick Sort](code401challenges/README.md)
+19. [Hash Table Implementation](code401challenges/README.md)
  
 
