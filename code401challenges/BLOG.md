@@ -1,6 +1,13 @@
 ## Insertion Sort
 Insertion sort algorithm is in-place algorithm, where it partitions the array into sorted and unsorted partitions. As we look for correct insertion order, sorted partition grows from left to right. It starts out as the element at index 0 is in sorted partition, and element at index 1 is in unsorted partition. On each iteration, we insert first unsorted value into sorted list. 
 
+Steps:
+1. If it is the first element, it is sorted already, just return arr
+2. Pick next element
+3. Compare with all the element in the sorted sub list
+4. Shift all the elements in the sorted sub array that is greater than the value to be sorted to the right 
+5. Insert the value
+
 Unsorted Array: [14, 35, 27, 10, 19, 42, 44]
 * firstUnsortedIndex = 1 (this is the first index of unsorted partition)
 * i = 0 (index used to traverse the sorted partition from left to right)
@@ -24,6 +31,16 @@ InsertionSort(int[] arr)
         for i = firstUnsortedIndex, i > 0 && arr[i - 1] > new Element, i--
             arr[i] = arr[i - 1]
         arr[i] = new Element
+
+//Another version
+Algorithm insertionSort(inr arr)
+    for i <-- 1 to length-1
+        elementToBeSorted = arr[i]
+        hole = i
+        while hole > 0 && arr[hole -1] > elementToBeSorted
+            arr[hole] <-- arr[hole - 1]
+                hole <-- hole -1
+    arr[hole] <---- elementToBeSorted 
 ```
 #### Efficiency
 * It is in-place algorithms 
