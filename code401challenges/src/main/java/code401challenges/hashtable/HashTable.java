@@ -2,13 +2,10 @@ package code401challenges.hashtable;
 
 import code401challenges.linkedlist.LinkedList;
 
-public class HashTable {
+public class HashTable<T> {
     private Node[] map;
-    private LinkedList<String>[] hashMap;
-
 
     public HashTable(int size) {
-        hashMap = new LinkedList[size];
         map = new Node[size];
     }
 
@@ -27,8 +24,8 @@ public class HashTable {
     //Add method: takes in both the key and value. This method should hash the key, and add the key and value pair
     // to the table, handling collisions as needed.
 
-    public void add(String key, String value) {
-        int hashKey = hash(key);
+    public void add(T key, T value) {
+        int hashKey = hash((String) key);
         System.out.println("key: " + key + " hashKey:  " + hashKey);
         if(this.map[hashKey] == null) {
             map[hashKey] = new Node(key, value);
@@ -42,9 +39,9 @@ public class HashTable {
     }
 
     //get method: takes in the key and returns the value from the table.
-    public String get(String key) {
-        int hashKey = hash(key);
-        Node newNode = map[hashKey];
+    public T get(T key) {
+        int hashKey = hash((String)key);
+        Node<T> newNode = map[hashKey];
         while(newNode != null) {
             if(newNode.getKey().equals(key)){
                 return newNode.getValue();
@@ -56,8 +53,8 @@ public class HashTable {
     }
 
     //contains method: takes in the key and returns a boolean, indicating if the key exists in the table already.
-    public boolean contains(String key) {
-        int hashKey = hash(key);
+    public boolean contains(T key) {
+        int hashKey = hash((String)key);
         if(this.map[hashKey] == null) {
             return false;
         }
