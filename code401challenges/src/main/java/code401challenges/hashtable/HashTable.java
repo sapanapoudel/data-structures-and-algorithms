@@ -1,9 +1,14 @@
 package code401challenges.hashtable;
 
+import code401challenges.linkedlist.LinkedList;
+
 public class HashTable {
     private Node[] map;
+    private LinkedList<String>[] hashMap;
+
 
     public HashTable(int size) {
+        hashMap = new LinkedList[size];
         map = new Node[size];
     }
 
@@ -29,6 +34,7 @@ public class HashTable {
             map[hashKey] = new Node(key, value);
         } else {
             //handling collision using Linked list
+
             Node temp = map[hashKey];
             map[hashKey]  = new Node(key, value);
             map[hashKey] .setNext(temp);
@@ -38,8 +44,13 @@ public class HashTable {
     //get method: takes in the key and returns the value from the table.
     public String get(String key) {
         int hashKey = hash(key);
-        if(this.map[hashKey] != null) {
-            return map[hashKey].getValue();
+        Node newNode = map[hashKey];
+        while(newNode != null) {
+            if(newNode.getKey().equals(key)){
+                return newNode.getValue();
+            }
+            newNode = newNode.getNext();
+
         }
         return null;
     }
