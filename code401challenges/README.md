@@ -399,3 +399,20 @@ contains()
 #### Solution
 [Code](src/main/java/code401challenges/hashtable/HashTable.java) |
 [Test](src/test/java/code401challenges/hashtable/HashTableTest.java)
+
+## Code Challenge 31: Find the first repeated word in a book.
+#### Challenge 
+Write a function that takes lengthy string parameter and return the first repeated word.
+#### Resources
+https://stackoverflow.com/questions/35828592/replaceall-in-java
+#### Solution
+[Code](src/main/java/code401challenges/hashtable/RepeatedWord.java) |
+[Test](src/test/java/code401challenges/hashtable/RepeatedWordTest.java)
+
+## Code Challenge 32: Find common values in 2 binary trees.
+#### Challenge
+Write a function called tree_intersection that takes two binary tree parameters. Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+#### Solution
+[Code](src/main/java/code401challenges/hashtable/TreeIntersection.java) | 
+[Test](src/test/java/code401challenges/hashtable/TreeIntersectionTest.java)

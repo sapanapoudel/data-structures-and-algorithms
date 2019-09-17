@@ -2,7 +2,7 @@ package code401challenges.hashtable;
 
 import code401challenges.linkedlist.LinkedList;
 
-public class HashTable<T> {
+public class HashTable<T, S> {
     private Node[] map;
 
     public HashTable(int size) {
