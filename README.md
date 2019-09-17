@@ -20,5 +20,7 @@
 17. [Merge Sort](code401challenges/README.md)
 18. [Quick Sort](code401challenges/README.md)
 19. [Hash Table Implementation](code401challenges/README.md)
+20. [Find the first repeated word in a book](code401challenges/README.md)
+21. [Find common values in 2 binary trees](code401challenges/README.md)
  
 
