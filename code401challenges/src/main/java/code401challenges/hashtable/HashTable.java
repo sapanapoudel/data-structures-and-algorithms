@@ -2,7 +2,7 @@ package code401challenges.hashtable;
 
 import code401challenges.linkedlist.LinkedList;
 
-public class HashTable<T, S> {
+public class HashTable<T, K> {
     private Node[] map;
 
     public HashTable(int size) {
@@ -24,7 +24,7 @@ public class HashTable<T, S> {
     //Add method: takes in both the key and value. This method should hash the key, and add the key and value pair
     // to the table, handling collisions as needed.
 
-    public void add(T key, T value) {
+    public void add(T key, K value) {
         int hashKey = hash((String) key);
         System.out.println("key: " + key + " hashKey:  " + hashKey);
         if(this.map[hashKey] == null) {

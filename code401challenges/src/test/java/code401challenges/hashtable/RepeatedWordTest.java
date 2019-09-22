@@ -30,4 +30,9 @@ public class RepeatedWordTest {
         assertEquals("No repeated words found in the string.", RepeatedWord.repeatedWord("I love to code") );
     }
 
+    @Test public void findCommonWordTest() {
+        String str  = "I love to code, I am in  Fellow";
+        System.out.println(RepeatedWord.findCommonWord(str));
+    }
+
 }
