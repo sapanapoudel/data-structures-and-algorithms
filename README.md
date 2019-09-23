@@ -22,5 +22,8 @@
 19. [Hash Table Implementation](code401challenges/README.md)
 20. [Find the first repeated word in a book](code401challenges/README.md)
 21. [Find common values in 2 binary trees](code401challenges/README.md)
+22. [Implement a simplified LEFT JOIN for 2 Hash maps](code401challenges/README.md)
+23. [Graph Implementation](code401challenges/README.md)
+24. [Implement a breadth-first traversal on a graph](code401challenges/README.md)
  
 
