@@ -416,3 +416,12 @@ Write a function called tree_intersection that takes two binary tree parameters.
 #### Solution
 [Code](src/main/java/code401challenges/hashtable/TreeIntersection.java) | 
 [Test](src/test/java/code401challenges/hashtable/TreeIntersectionTest.java)
+
+## Code Challenge 33. Implement a simplified LEFT JOIN for 2 Hash maps.
+####  Challenge
+Write a function that LEFT JOINs two hashmaps into a single data structure. 
+#### Solution 
+[Code](src/main/java/code401challenges/hashtable/LeftJoin.java) |
+[Test](src/test/java/code401challenges/hashtable/LeftJoinTest.java)
+                                                                          
+                                
