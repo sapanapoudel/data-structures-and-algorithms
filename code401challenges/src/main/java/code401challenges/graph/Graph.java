@@ -1,10 +1,7 @@
 package code401challenges.graph;
 
-import code401challenges.stacksandqueues.Queue;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Set;
 
 public class Graph<T> {
   private HashMap<T, ArrayList<Edge<T>>> vertices;
