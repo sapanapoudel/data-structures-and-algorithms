@@ -1,5 +1,7 @@
 package code401challenges.linkedlist;
 
+import code401challenges.stacksandqueues.Stack;
+
 public class LinkedList<T> {
     //Fields
     Node <T> head;
@@ -199,6 +201,32 @@ public class LinkedList<T> {
 
         }
         return previous;
+    }
+
+    //Is linked list a palindrome
+    public boolean isPlain(Node head) {
+        Node fast = head;
+        Node slow = head;
+        Stack<T> s = new Stack<>();
+        //move fast pointer twice faster than slow pointer
+        while(fast != null && fast.getNextNode() != null) {
+            s.push((T) slow.getValue());
+            slow = slow.getNextNode();
+            fast = fast.getNextNode().getNextNode();
+        }
+        //If there is a odd number of elements in Linked list, skip middle
+        if(fast != null) {
+            slow = slow.getNextNode();
+        }
+
+        while(slow != null) {
+            T top = s.pop();
+            if(top != slow.getValue()){
+                return false;
+            }
+            slow = slow.getNextNode();
+        }
+        return true;
     }
 
 }

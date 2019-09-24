@@ -2,9 +2,9 @@ package code401challenges.graph;
 
 public class Edge<T> {
     private int weight;
-    private T destination;
+    private Vertex <T> destination;
 
-    public Edge(int weight, T destination) {
+    public Edge(int weight, Vertex<T> destination) {
         this.weight = weight;
         this.destination = destination;
     }
@@ -17,11 +17,11 @@ public class Edge<T> {
         this.weight = weight;
     }
 
-    public T getDestination() {
+    public Vertex<T> getDestination() {
         return destination;
     }
 
-    public void setDestination(T destination) {
+    public void setDestination(Vertex<T> destination) {
         this.destination = destination;
     }
 }

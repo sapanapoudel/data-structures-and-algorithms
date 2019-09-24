@@ -1,7 +1,10 @@
 package code401challenges.graph;
 
+import code401challenges.stacksandqueues.Queue;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Graph<T> {
   private HashMap<T, ArrayList<Edge<T>>> vertices;
@@ -31,7 +34,7 @@ public class Graph<T> {
     }
 
     //Add edge
-    public void addEdge(T value, T destination, int weight) {
+    public void addEdge(T value, Vertex<T> destination, int weight) {
         if(vertices.containsKey(value) && vertices.containsKey(destination)){
             ArrayList<Edge<T>> edgeList = vertices.get(value);
             Edge<T> newEdge = new Edge<>(weight, destination);
@@ -66,4 +69,25 @@ public class Graph<T> {
     }
 
     //Implement breath-first traversal
+    public List breathFirstGraphTraversal(Vertex<T> value) {
+      List graphNodes = new ArrayList();
+        Queue q = new Queue();
+        q.enqueue(value);
+
+        while(!q.isEmpty()){
+            Vertex vertex = (Vertex) q.dequeue();
+            vertex.visited = true;
+            graphNodes.add(vertex.getValue());
+
+            for(Edge edge : (ArrayList<Edge>)vertex.getNeightbor()) {
+                if(!edge.getDestination().visited){
+                    edge.getDestination().visited = true;
+                    q.enqueue(edge.getDestination());
+                }
+            }
+
+
+        }
+        return graphNodes;
+    }
 }
