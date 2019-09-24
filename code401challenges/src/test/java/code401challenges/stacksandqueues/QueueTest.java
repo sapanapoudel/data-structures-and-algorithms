@@ -70,8 +70,16 @@ public class QueueTest {
         assertEquals("Should be equal", "Front <--Rear", newQueue.toString());
     }
 
+    //Reverse the queue
+    @Test public void reverseQueueTest() {
+        Queue<Integer> newQueue = new Queue<>();
+        newQueue.enqueue(2);
+        newQueue.enqueue(4);
+        newQueue.enqueue(6);
+        System.out.println(newQueue.getFront().getValue());
+        System.out.println(newQueue.reverse(newQueue.getFront()));
 
-
+    }
 
 
 }
