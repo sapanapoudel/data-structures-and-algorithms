@@ -1,6 +1,6 @@
 package code401challenges.stacksandqueues;
 
-import code401challenges.utilities.Animal;
+import java.util.SplittableRandom;
 
 public class Queue <T> {
     private Node<T> front;
@@ -69,5 +69,31 @@ public class Queue <T> {
     public boolean isEmpty() {
         return this.front == null;
     }
+
+    //Reverse Queue
+    public T reverseQueue(T value) {
+        Queue<T> q = new Queue<>();
+        if(this.isEmpty()){
+            return front.getValue();
+        }
+        q.dequeue();
+        reverseQueue(value);
+        q.enqueue(value);
+        return front.getValue();
+    }
+
+    public T  reverse(Node<T> front){
+        Queue<T> q = new Queue<>();
+        Stack<T> s = new Stack<>();
+        while(!q.isEmpty()){
+            s.push(q.dequeue());
+        }
+        while(!s.isEmpty()){
+            q.enqueue(s.pop());
+        }
+        return front.getValue();
+    }
+
+
 
 }

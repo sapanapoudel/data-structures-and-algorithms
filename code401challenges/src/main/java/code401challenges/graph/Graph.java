@@ -1,5 +1,7 @@
 package code401challenges.graph;
 
+import code401challenges.stacksandqueues.Queue;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -52,10 +54,13 @@ public class Graph<T> {
     }
 
     //Get neighbor
-    public ArrayList<Edge<T>> getNeighbor(T value) {
-      ArrayList<Edge<T>> neighborList = vertices.get(value);
-      return neighborList;
-
+    public ArrayList<Edge<T>> getNeighbor(T node) {
+      ArrayList<Edge<T>> result = new ArrayList<>();
+        if(vertices.containsKey(node)){
+            return vertices.get(node);
+        } else {
+            return null;
+        }
     }
 
     //Get Size
@@ -63,6 +68,5 @@ public class Graph<T> {
       return size;
     }
 
-    //Implement a breadth-first traversal on a graph.
-
+    //Implement breath-first traversal
 }
