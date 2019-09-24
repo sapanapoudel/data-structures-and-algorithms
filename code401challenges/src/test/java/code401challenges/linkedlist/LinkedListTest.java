@@ -202,4 +202,16 @@ public class LinkedListTest {
 //        list.reverseLinkedList(1);
     }
 
+    //Test for palindrome
+    @Test public void isPalindromeTest() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(1);
+
+        System.out.println(list.isPlain(list.head));
+    }
+
 }

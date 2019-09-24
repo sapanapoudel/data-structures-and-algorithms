@@ -423,5 +423,31 @@ Write a function that LEFT JOINs two hashmaps into a single data structure.
 #### Solution 
 [Code](src/main/java/code401challenges/hashtable/LeftJoin.java) |
 [Test](src/test/java/code401challenges/hashtable/LeftJoinTest.java)
-                                                                          
-                                
+
+## lab. Graph Implementation 
+#### Methods and Class
+```
+Class:
+Edge
+Vertex
+Graph
+
+Method:
+addNode()
+addEdge()
+getNodes()
+getNeighbor()
+size()
+```                                                                          
+#### Solution 
+[Code](src/main/java/code401challenges/graph/Graph.java) |
+[Test](src/test/java/code401challenges/graph/GraphTest.java)    
+![White board image](assets/Graph_Implemenation.jpg)                           
+
+## 36. Implement a breadth-first traversal on a graph
+#### Challenge
+Extend your graph object with a breadth-first traversal method that accepts a starting node without utilizing any built in method.
+#### Solution 
+[Code](src/main/java/code401challenges/graph/Graph.java) |
+[Test](src/test/java/code401challenges/graph/GraphTest.java)  
+

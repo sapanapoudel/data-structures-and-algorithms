@@ -1,16 +1,17 @@
 package code401challenges.graph;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 public class Vertex<T> {
    private T value;
-   private Set<Edge<T>> neightbor;
+   private ArrayList<Edge<T>> neightbor;
+   public boolean visited;
 
-   public Vertex(T value, Set<Edge<T>> neightbor) {
+   public Vertex(T value) {
        this.value = value;
-       this.neightbor = neightbor;
+       this.neightbor = new ArrayList<>();
    }
-
     public T getValue() {
         return value;
     }
@@ -19,11 +20,11 @@ public class Vertex<T> {
         this.value = value;
     }
 
-    public Set<Edge<T>> getNeightbor() {
+    public ArrayList<Edge<T>> getNeightbor() {
         return neightbor;
     }
 
-    public void setNeightbor(Set<Edge<T>> neightbor) {
+    public void setNeightbor(ArrayList<Edge<T>> neightbor) {
         this.neightbor = neightbor;
     }
 }
