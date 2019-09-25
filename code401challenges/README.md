@@ -447,6 +447,20 @@ size()
 ## 36. Implement a breadth-first traversal on a graph
 #### Challenge
 Extend your graph object with a breadth-first traversal method that accepts a starting node without utilizing any built in method.
+#### Approach and Efficiency
+* Write a method that takes a root vertex 
+* Create a result Array lis to hold all the vertex
+* Create a queue of type Vertex
+* Enqueue given vertex into stack
+* While the stack is not empty, dequeue the vertex and save into current
+* Iterate through all the edges in adjlist
+* Check if the vertex is visited already, if not then add into result arraylist 
+* Return result
+
+#### Big O
+* Time Complexity: O(n)
+* Space Complexity: O(n)
+
 #### Solution 
 [Code](src/main/java/code401challenges/graph/Graph.java) |
 [Test](src/test/java/code401challenges/graph/GraphTest.java)  
