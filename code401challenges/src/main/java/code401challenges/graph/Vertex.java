@@ -16,4 +16,8 @@ public class Vertex<T> {
         this.value = value;
     }
 
+    public String toString() {
+       return this.getValue().toString();
+    }
+
 }
