@@ -4,7 +4,7 @@ public class Edge<T> {
     private int weight;
     private Vertex <T> destination;
 
-    public Edge(int weight, Vertex<T> destination) {
+    public Edge(int weight, Vertex destination) {
         this.weight = weight;
         this.destination = destination;
     }
