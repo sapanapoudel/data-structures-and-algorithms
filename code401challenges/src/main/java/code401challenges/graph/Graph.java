@@ -67,25 +67,23 @@ public class Graph<T> {
     }
 
     //Implement breath-first traversal
-//    public List breathFirstGraphTraversal(Vertex value) {
-//      List graphNodes = new ArrayList();
-//        Queue q = new Queue();
-//        q.enqueue(value);
-//
-//        while(!q.isEmpty()){
-//            Vertex vertex = (Vertex) q.dequeue();
-//            vertex.visited = true;
-//            graphNodes.add(vertex.getValue());
-//
-//            for(Edge edge : (ArrayList<Edge>)vertex.getNeightbor()) {
-//                if(!edge.getDestination().visited){
-//                    edge.getDestination().visited = true;
-//                    q.enqueue(edge.getDestination());
-//                }
-//            }
-//
-//
-//        }
-//        return graphNodes;
-//    }
+    public List breathFirstGraphTraversal(Vertex vertex) {
+      List<Vertex> graphNodes = new ArrayList<>();
+        Queue<Vertex> q = new Queue<>();
+        q.enqueue(vertex);
+
+        while(!q.isEmpty()){
+            Vertex current =  q.dequeue();
+            vertex.visited = true;
+            graphNodes.add(current);
+
+            for(Edge edge : adjList.get(current)) {
+                if(!edge.getDestination().visited) {
+                    edge.getDestination().visited = true;
+                    q.enqueue(edge.getDestination());
+                }
+            }
+        }
+        return graphNodes;
+    }
 }

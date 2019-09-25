@@ -2,6 +2,8 @@ package code401challenges.graph;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class GraphTest {
@@ -29,7 +31,16 @@ public class GraphTest {
                 " Edge: 3 Weight: 2\n" +
                 " Vertex --> 3 Edge: 2 Weight: 2\n" +
                 " Vertex --> 4 Vertex --> 5", newGraph.printGraph());
+
         assertEquals(5, newGraph.getSize());
+
+
+        ArrayList<Vertex> expected = new ArrayList();
+        expected.add(vertex1);
+        expected.add(vertex2);
+        expected.add(vertex3);
+        assertEquals(expected, newGraph.breathFirstGraphTraversal(vertex1));
+
     }
 
     @Test public void addEdgesTest() {
