@@ -25,5 +25,7 @@
 22. [Implement a simplified LEFT JOIN for 2 Hash maps](code401challenges/README.md)
 23. [Graph Implementation](code401challenges/README.md)
 24. [Implement a breadth-first traversal on a graph](code401challenges/README.md)
+25. [Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?](code401challenges/README.md)
+26. [Conduct a depth first preorder traversal on a graph](code401challenges/README.md)
  
 

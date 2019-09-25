@@ -76,6 +76,14 @@ public class GraphTest {
                 " Edge: 1 Weight: 5\n", newGraph.printGraph());
 
         assertEquals(5, newGraph.getSize());
+
+        ArrayList<Vertex> expected = new ArrayList();
+        expected.add(vertex1);
+        expected.add(vertex5);
+        expected.add(vertex4);
+        expected.add(vertex3);
+        expected.add(vertex2);
+        assertEquals(expected, newGraph.depthFirstGraphTraversal(vertex1));
     }
 
 }

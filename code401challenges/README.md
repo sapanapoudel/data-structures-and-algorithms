@@ -451,3 +451,21 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 [Code](src/main/java/code401challenges/graph/Graph.java) |
 [Test](src/test/java/code401challenges/graph/GraphTest.java)  
 
+## 38. Conduct a depth first preorder traversal on a graph
+#### Approach and Efficiency
+* Write a method that takes a root vertex 
+* Create a result Array lis to hold all the vertex
+* Create a stack of type Vertex
+* Push given vertex into stack
+* While the stack is not empty, pop the vertex and save into current
+* Iterate through all the edges in adjlist
+* Check if the vertex is visited already, if not then add into result arraylist 
+* Return result
+
+#### Big O
+* Time Complexity: O(n)
+* Space Complexity: O(n)
+
+#### Solution 
+[Code](src/main/java/code401challenges/graph/Graph.java) |
+[Test](src/test/java/code401challenges/graph/GraphTest.java) 

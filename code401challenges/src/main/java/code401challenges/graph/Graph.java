@@ -1,5 +1,6 @@
 package code401challenges.graph;
 import code401challenges.stacksandqueues.Queue;
+import code401challenges.stacksandqueues.Stack;
 
 import java.util.*;
 
@@ -63,24 +64,44 @@ public class Graph<T> {
             }
         }
         return printGraph.toString();
-
     }
 
     //Implement breath-first traversal
     public List breathFirstGraphTraversal(Vertex vertex) {
-      List<Vertex> graphNodes = new ArrayList<>();
+        List<Vertex> graphNodes = new ArrayList<>();
         Queue<Vertex> q = new Queue<>();
         q.enqueue(vertex);
 
-        while(!q.isEmpty()){
-            Vertex current =  q.dequeue();
+        while (!q.isEmpty()) {
+            Vertex current = q.dequeue();
             vertex.visited = true;
             graphNodes.add(current);
 
-            for(Edge edge : adjList.get(current)) {
-                if(!edge.getDestination().visited) {
+            for (Edge edge : adjList.get(current)) {
+                if (!edge.getDestination().visited) {
                     edge.getDestination().visited = true;
                     q.enqueue(edge.getDestination());
+                }
+            }
+        }
+        return graphNodes;
+    }
+
+    //Implement depth-first traversal
+    public List depthFirstGraphTraversal(Vertex vertex) {
+        List<Vertex> graphNodes = new ArrayList<>();
+        Stack<Vertex> s = new Stack<>();
+        s.push(vertex);
+
+        while (!s.isEmpty()) {
+            Vertex current = s.pop();
+            vertex.visited = true;
+            graphNodes.add(current);
+
+            for (Edge edge : adjList.get(current)) {
+                if (!edge.getDestination().visited) {
+                    edge.getDestination().visited = true;
+                    s.push(edge.getDestination());
                 }
             }
         }
