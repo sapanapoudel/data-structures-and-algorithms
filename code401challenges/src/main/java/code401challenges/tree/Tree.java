@@ -144,4 +144,22 @@ public class Tree<T> {
         }
         return  output;
     }
+
+    //find the duplicates in the tree recursively and iteratively
+    public HashSet<T> removeDups(Node root, HashSet set) {
+       if(root == null) {
+           return set;
+       }
+       if(root.getLeftChildNode() != null) {
+           removeDups(root.getLeftChildNode(), set);
+       }
+       if(set.contains(root.getData())){
+           set.add(root.getData());
+       }
+       if(root.getRightChildNode() != null) {
+           removeDups(root.getRightChildNode(), set);
+       }
+       return set;
+    }
+
 }
